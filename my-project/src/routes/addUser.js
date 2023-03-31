@@ -3,9 +3,9 @@ function AddUser(){
   
     return (
         <>
+        
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">        
     <div class="pb-4 pt-6 px-2 bg-white dark:bg-gray-900">
-    <button className="w-48 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg h-10">ADD USER</button>            
         <label for="table-search" class="sr-only">Search</label>
         <div class="relative mt-2">
             <div class="absolute inset-y-1 left-0 flex items-center pl-3 pointer-events-none">
