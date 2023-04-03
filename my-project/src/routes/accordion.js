@@ -37,19 +37,19 @@ function Accordion() {
 const data = [
   {
     question: <p className='font-bold'>PERSONAL INFORMATION</p>,
-    answer: <ul className='font-semibold'>
-      <li>PATIENT TYPE:</li>
-      <li>OPD/ID NO.:</li>
-      <li>LAST NAME</li>
-      <li>FIRST NAME:</li>
-      <li>MIDDLE NAME:</li>
-      <li>SEX:</li>
-      <li>CIVIL STATUS:</li>
-      <li>DATE OF BIRTH:</li>
-      <li>HOME ADDRESS:</li>
-      <li>PRESENT ADDRESS:</li>
-      <li>MOBILE NUMBER:</li>
-      <li>COLLEGE/DEPARTMENT:</li>
+    answer: <ul className='flex flex-wrap font-semibold'>
+      <li className='w-1/3 p-4 border-r border-black'>PATIENT TYPE:</li>
+      <li className='w-1/3 p-4 border-r border-black'>OPD/ID NO.:</li>
+      <li className='w-1/3 p-4 border-r'>LAST NAME</li>
+      <li className='w-1/3 p-4 border-r border-black'>FIRST NAME:</li>
+      <li className='w-1/3 p-4 border-r border-black'>MIDDLE NAME:</li>
+      <li className='w-1/3 p-4 border-r'>SEX:</li>
+      <li className='w-1/3 p-4 border-r border-black'>CIVIL STATUS:</li>
+      <li className='w-1/3 p-4 border-r border-black'>DATE OF BIRTH:</li>
+      <li className='w-1/3 p-4 border-r'>HOME ADDRESS:</li>
+      <li className='w-1/3 p-4 border-r border-black'>PRESENT ADDRESS:</li>
+      <li className='w-1/3 p-4 border-r border-black'>MOBILE NUMBER:</li>
+      <li className='w-1/3 p-4 border-r'>COLLEGE/DEPARTMENT:</li>
     </ul>,
   },
   {
@@ -64,15 +64,15 @@ const data = [
     </ul>,
   },{
     question: <p className='font-bold'>FAMILY HISTORY</p>,
-    answer: <ul className='font-semibold'>
-      <li>HIGH BLOOD PRESSURE:</li>
-      <li>TUBERCULOSIS:</li>
-      <li>HEART DISEASE:</li>
-      <li>ASTHMA:</li>
-      <li>DIABETES:</li>
-      <li>ALLERGIES:</li>
-      <li>CANCER:</li>
-      <li>ANY OTHER HEREDITARY DISEASE:</li>
+    answer: <ul className='flex flex-wrap font-semibold'>
+      <li className='w-1/3 p-4 border-r border-black'>HIGH BLOOD PRESSURE:</li>
+      <li className='w-1/3 p-4 border-r border-black'>TUBERCULOSIS:</li>
+      <li className='w-1/3 p-4 border-r'>HEART DISEASE:</li>
+      <li className='w-1/3 p-4 border-r border-black'>ASTHMA:</li>
+      <li className='w-1/3 p-4 border-r border-black'>DIABETES:</li>
+      <li className='w-1/3 p-4 border-r'>ALLERGIES:</li>
+      <li className='w-1/3 p-4 border-r border-black'>CANCER:</li>
+      <li className='w-1/3 p-4 border-r border-black'>ANY OTHER HEREDITARY DISEASE:</li>
     </ul>,
   },
   {
