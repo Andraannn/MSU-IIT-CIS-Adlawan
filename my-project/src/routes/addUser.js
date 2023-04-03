@@ -44,13 +44,14 @@ function AddUser(){
               <input className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" list="names" placeholder="Enter your username"
               />
               <datalist id= "names">
-                    <option>One</option>
-                    <option>Two</option>
-                    <option>Three</option>
+                    <option>andrei.adlawan</option>
+                    <option>cyrus.conde</option>
+                    <option>andrei.anghay</option>
+                    <option>phoenix.dotarot</option>
               </datalist>
               </div>
             </div>
-            <div className="p-5">
+            <div className="px-5">
             <label for="role"
                 className="block text-gray-700 font-medium mb-2 w-96"
                 htmlFor="role"
