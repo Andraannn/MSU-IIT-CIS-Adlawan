@@ -6,6 +6,7 @@ import AddUser from './routes/addUser'
 import SimpleModal from './routes/modal'
 import AddUserModal from './routes/AddUserModal';
 import Testing from './routes/Test';
+import Doctor from './routes/doctor';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
       <Route path="/test" element={<SimpleModal></SimpleModal>}></Route>
       <Route path="/modal_adduser" element={<AddUserModal></AddUserModal>}></Route>
       <Route path="/testing" element={<Testing></Testing>}></Route>
+      <Route path="/doctor" element={<Doctor></Doctor>}></Route>
     </Routes>
   </div>
   )
