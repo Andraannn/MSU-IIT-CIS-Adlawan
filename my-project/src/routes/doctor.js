@@ -11,10 +11,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio1" name="skin" value="Normal"  checked/>
-                <label className="mr-2" htmlFor="radio1">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio2" name="skin" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio2">ABNORMAL</label>
+                <input type="radio" id="skin_n" name="skin" value="Normal" checked/>
+                <label className="mr-2" htmlFor="skin_n">NORMAL</label>
+                <input type="radio" id="skin_ab" name="skin" value="Abnormal"/>
+                <label className="mr-2" htmlFor="skin_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -28,10 +28,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio3" name="abdomen" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio3">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio4" name="abdomen" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio4">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="abdomen_n" name="abdomen" value="Normal" checked/>
+                <label className="mr-2" htmlFor="abdomen_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="abdomen_ab" name="abdomen" value="Abnormal"/>
+                <label className="mr-2" htmlFor="abdomen_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -45,10 +45,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio5" name="head_neck_scalp" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio5">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio6" name="head_neck_scalp" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio6">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="head_n" name="head_neck_scalp" value="Normal" checked/>
+                <label className="mr-2" htmlFor="head_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="head_ab" name="head_neck_scalp" value="Abnormal"/>
+                <label className="mr-2" htmlFor="head_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -62,10 +62,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span>
-                <input type="radio" className="inline-flex" id="radio7" name="back_flank" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio7">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio8" name="back_flank" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio8">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="back_n" name="back_flank" value="Normal" checked/>
+                <label className="mr-2" htmlFor="back_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="back_ab" name="back_flank" value="Abnormal"/>
+                <label className="mr-2" htmlFor="back_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -79,10 +79,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio9" name="eyes" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio9">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio10" name="eyes" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio10">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="eyes_n" name="eyes" value="Normal" checked/>
+                <label className="mr-2" htmlFor="eyes_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="eyes_ab" name="eyes" value="Abnormal"/>
+                <label className="mr-2" htmlFor="eyes_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -96,10 +96,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio11" name="anus_rectum" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio11">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio12" name="anus_rectum" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio12">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="anus_n" name="anus_rectum" value="Normal" checked/>
+                <label className="mr-2" htmlFor="anus_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="anus_ab" name="anus_rectum" value="Abnormal"/>
+                <label className="mr-2" htmlFor="anus_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -113,10 +113,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio13" name="eyes_nose_throat" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio13">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio14" name="eyes_nose_throat" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio14">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="nose_n" name="eyes_nose_throat" value="Normal" checked/>
+                <label className="mr-2" htmlFor="nose_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="nose_ab" name="eyes_nose_throat" value="Abnormal"/>
+                <label className="mr-2" htmlFor="nose_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -130,10 +130,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio13" name="gu_system" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio13">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio14" name="gu_system" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio14">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="gu_n" name="gu_system" value="Normal" checked/>
+                <label className="mr-2" htmlFor="gu_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="gu_ab" name="gu_system" value="Abnormal"/>
+                <label className="mr-2" htmlFor="gu_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -147,10 +147,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio15" name="nose_sinuses" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio15">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio16" name="nose_sinuses" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio16">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="sinuses_n" name="nose_sinuses" value="Normal" checked/>
+                <label className="mr-2" htmlFor="sinuses_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="sinuses_ab" name="nose_sinuses" value="Abnormal"/>
+                <label className="mr-2" htmlFor="sinuses_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -164,10 +164,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio17" name="inguinal_genitals" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio17">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio18" name="inguinal_genitals" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio18">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="inguinal_n" name="inguinal_genitals" value="Normal" checked/>
+                <label className="mr-2" htmlFor="inguinal_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="inguinal_ab" name="inguinal_genitals" value="Abnormal"/>
+                <label className="mr-2" htmlFor="inguinal_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -181,10 +181,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio19" name="mouth_throat" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio19">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio20" name="mouth_throat" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio20">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="mouth_n" name="mouth_throat" value="Normal" checked/>
+                <label className="mr-2" htmlFor="mouth_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="mouth_ab" name="mouth_throat" value="Abnormal"/>
+                <label className="mr-2" htmlFor="mouth_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -198,10 +198,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio21" name="reflexes" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio21">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio22" name="reflexes" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio22">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="reflexes_n" name="reflexes" value="Normal" checked/>
+                <label className="mr-2" htmlFor="reflexes_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="reflexes_ab" name="reflexes" value="Abnormal"/>
+                <label className="mr-2" htmlFor="reflexes_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -215,10 +215,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio23" name="neck_ln_thyroid" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio23">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio24" name="neck_ln_thyroid" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio24">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="neck_n" name="neck_ln_thyroid" value="Normal" checked/>
+                <label className="mr-2" htmlFor="neck_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="neck_ab" name="neck_ln_thyroid" value="Abnormal"/>
+                <label className="mr-2" htmlFor="neck_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -232,10 +232,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio25" name="extremities" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio25">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio26" name="extremities" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio26">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="extrem_n" name="extremities" value="Normal" checked/>
+                <label className="mr-2" htmlFor="extrem_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="extrem_ab" name="extremities" value="Abnormal"/>
+                <label className="mr-2" htmlFor="extrem_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -249,10 +249,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio27" name="chest_breast_axilla" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio27">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio28" name="chest_breast_axilla" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio28">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="chest_n" name="chest_breast_axilla" value="Normal" checked/>
+                <label className="mr-2" htmlFor="chest_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="chest_ab" name="chest_breast_axilla" value="Abnormal"/>
+                <label className="mr-2" htmlFor="chest_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -266,10 +266,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio28" name="neurologic" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio28">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio29" name="neurologic" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio29">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="neu_n" name="neurologic" value="Normal" checked/>
+                <label className="mr-2" htmlFor="neu_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="neu_ab" name="neurologic" value="Abnormal"/>
+                <label className="mr-2" htmlFor="neu_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -283,10 +283,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio30" name="lungs" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio30">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio31" name="lungs" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio31">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="lungs_n" name="lungs" value="Normal" checked/>
+                <label className="mr-2" htmlFor="lungs_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="lungs_ab" name="lungs" value="Abnormal"/>
+                <label className="mr-2" htmlFor="lungs_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -300,10 +300,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio32" name="endocrine" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio32">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio33" name="endocrine" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio33">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="endo_n" name="endocrine" value="Normal" checked/>
+                <label className="mr-2" htmlFor="endo_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="endo_ab" name="endocrine" value="Abnormal"/>
+                <label className="mr-2" htmlFor="endo_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -317,10 +317,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio34" name="heart" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio34">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio35" name="heart" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio35">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="heart_n" name="heart" value="Normal" checked/>
+                <label className="mr-2" htmlFor="heart_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="heart_ab" name="heart" value="Abnormal"/>
+                <label className="mr-2" htmlFor="heart_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
@@ -334,10 +334,10 @@ function Doctor(){
             </div>
             <div className="col-span-2">
                 <span className="font-bold mr-2">:</span> 
-                <input type="radio" className="inline-flex" id="radio36" name="others" value="Normal" checked/>
-                <label className="mr-2" htmlFor="radio36">NORMAL</label>
-                <input type="radio" className="inline-flex" id="radio37" name="others" value="Abnormal"/>
-                <label className="mr-2" htmlFor="radio37">ABNORMAL</label>
+                <input type="radio" className="inline-flex" id="others_n" name="others" value="Normal" checked/>
+                <label className="mr-2" htmlFor="others_n">NORMAL</label>
+                <input type="radio" className="inline-flex" id="others_ab" name="others" value="Abnormal"/>
+                <label className="mr-2" htmlFor="others_ab">ABNORMAL</label>
                 <input type="text" placeholder="REMARKS" className="inline-flex border border-black py-1 px-2" />
             </div>
             
