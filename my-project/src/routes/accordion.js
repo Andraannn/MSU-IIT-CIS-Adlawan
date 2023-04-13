@@ -889,25 +889,25 @@ const data = [
                         <input type="number" id="WEIGHT" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
                 </div>
 
-  <p className='font-bold underline'>NURSING INTERVENTIONS</p>
+                    <p className='font-bold underline'>NURSING INTERVENTIONS</p>
 
-                <div>
-                        <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
-                        <input type="text" id="MED" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-                </div>
-                <div>
-                        <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
-                        <input type="text" id="NURSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' required/>
-                </div>
+                    <div>
+                            <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                            <input type="text" id="MED" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                    </div>
+                    <div>
+                            <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                            <input type="text" id="NURSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' required/>
+                    </div>
 
-                <div className="flex items-center">
-                        <input
-                            className="w-28 px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
-                            type="time"
-                            value={time}
-                            onChange={handleTimeChange}
-                        />
-                  </div>
+                    <div className="flex items-center">
+                            <input
+                                className="w-28 px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
+                                type="time"
+                                value={time}
+                                onChange={handleTimeChange}
+                            />
+                    </div>
         </div>
   </ul>,
 },

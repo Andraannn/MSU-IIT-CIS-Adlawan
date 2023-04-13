@@ -12,6 +12,7 @@ import PastMedical from './routes/pastmedical';
 import FamilyHistory from './routes/familyhistory';
 import Vitals from './routes/vitals';
 import Social from './routes/social';
+import PersonalInformation from './routes/personal';
 
 function App() {
   
@@ -29,6 +30,7 @@ function App() {
       <Route path="/familyhistory" element={<FamilyHistory></FamilyHistory>}></Route>
       <Route path="/vitals" element={<Vitals></Vitals>}></Route>
       <Route path="/socialhistory" element={<Social></Social>}></Route>
+      <Route path="/personalinfo" element={<PersonalInformation></PersonalInformation>}></Route>
       
     </Routes>
   </div>
