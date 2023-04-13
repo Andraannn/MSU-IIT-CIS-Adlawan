@@ -1,22 +1,41 @@
+import React, { useState } from 'react';
+
 function Testing() {
+  const [birthdate, setBirthdate] = useState('');
+  const [age, setAge] = useState(null);
+
+  function handleBirthdateChange(event) {
+    const inputBirthdate = event.target.value;
+    setBirthdate(inputBirthdate);
+
+    // calculate age if birthdate is provided
+    if (inputBirthdate) {
+      const birthday = new Date(inputBirthdate);
+      const ageInMs = Date.now() - birthday.getTime();
+      const ageDate = new Date(ageInMs);
+      const calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+      setAge(calculatedAge);
+    } else {
+      setAge(null);
+    }
+  }
 
     return(
         <>
-        <div class="flex flex-wrap max-w-4xl">
-          <div class="bg-gray-200 p-4 w-full md:w-1/3">Column 1</div>
-          <div class="bg-gray-300 p-4 w-full md:w-1/3">Column 2</div>
-          <div class="bg-gray-400 p-4 w-full md:w-1/3">Column 3</div>
-          <div class="bg-gray-500 p-4 w-full md:w-1/3">Column 4</div>
-          <div class="bg-gray-600 p-4 w-full md:w-1/3">Column 5</div>
-          <div class="bg-gray-700 p-4 w-full md:w-1/3">Column 6</div>
-          <div class="bg-gray-800 p-4 w-full md:w-1/3">Column 7 </div>
-        </div>
-
-        <div class="flex flex-col">
-          <label class="mb-2 font-bold" for="birthdate">Birthdate:</label>
-          <input class="border border-gray-400 p-2 mb-2" type="date" id="birthdate" onchange="calculateAge(this.value)"></input>
-          <div class="text-gray-600 text-sm" id="age"></div>
-        </div>
+      {/* AGE CALCULATION*/}
+        <div className="flex flex-col">
+      <label htmlFor="birthdate" className="mb-2 font-bold text-lg text-gray-700">Birthday</label>
+      <input
+        type="date"
+        id="birthdate"
+        name="birthdate"
+        className="border border-gray-400 p-2 rounded-md"
+        value={birthdate}
+        onChange={handleBirthdateChange}
+      />
+      {age && <p className="mt-2 text-gray-700">Age: {age}</p>}
+    </div>
+    {/* AGE CALCULATION*/}
         </>
     )
 }
