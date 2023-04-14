@@ -31,7 +31,7 @@ function App() {
       <Route path="/vitals" element={<Vitals></Vitals>}></Route>
       <Route path="/socialhistory" element={<Social></Social>}></Route>
       <Route path="/personalinfo" element={<PersonalInformation></PersonalInformation>}></Route>
-      
+
     </Routes>
   </div>
   )
