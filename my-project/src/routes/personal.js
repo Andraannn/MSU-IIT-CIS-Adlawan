@@ -40,53 +40,53 @@ function PersonalInformation(){
           
 			    <div className="font-bold">FULL NAME:</div>
                     <div>
-                        <input type="text" id="full)name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="full_name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
                     </div>
 		    </div>
 		  
 		          
-      <div class="col-span-3 lg:col-span-1">
-          <div className="font-bold">COLLEGE/DEPT.:
-              <div>
-                  <input type="text" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-              </div>
-          </div> 
-          <div className="font-bold">DATE OF BIRTH:
-              <div>
-                  <input type="text" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-              </div>
-          </div>
-          <div className="font-bold">AGE:
-              <div>
-                  <input type="text" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-              </div>
-          </div>
-          <div className="font-bold">SEX:
-              <div>
-                  <input type="text" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-              </div>
-          </div>
-      </div>
+            <div class="col-span-3 lg:col-span-1">
+                <div className="font-bold">COLLEGE/DEPT.:
+                    <div>
+                        <input type="text" id="colldept" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div> 
+                <div className="font-bold">DATE OF BIRTH:
+                    <div>
+                        <input type="text" id="bdate" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+                <div className="font-bold">AGE:
+                    <div>
+                        <input type="text" id="age" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+                <div className="font-bold">SEX:
+                    <div>
+                        <input type="text" id="sex" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+            </div>
 
-      <div class="col-span-3 lg:col-span-1">
-          <div className="font-bold">CIVIL STATUS:
-              <div>
-                  <input type="text" id="full)name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-              </div>
-          </div> 
-          <div className="font-bold">HOME ADDRESS:
-              <div>
-                  <input type="text" id="full)name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-              </div>
-          </div>
+            <div class="col-span-3 lg:col-span-1">
+                <div className="font-bold">CIVIL STATUS:
+                    <div>
+                        <input type="text" id="civil" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div> 
+                <div className="font-bold">HOME ADDRESS:
+                    <div>
+                        <input type="text" id="h_add" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
                 <div className="font-bold">PRESENT ADDRESS:
                     <div>
-                        <input type="text" id="full)name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="pres_add" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
                     </div>
                 </div>
                 <div className="font-bold">MOBILE NUMBER:
                     <div>
-                        <input type="text" id="full)name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" value="0938022" required disabled />
+                        <input type="text" id="mob_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
                     </div>
                 </div>
 		    </div>
