@@ -39,10 +39,10 @@ function PersonalInformation(){
             {/* end patient input */}
 	        <div class="col-span-3 lg:col-span-1">
 		        <div className="font-bold">PHOTO:
-                    <div className="px-36 col-span-3 lg:col-span-1">
+                    <div className="col-span-3 lg:col-span-1">
                         <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYVEvttsDPxq1WlChcFuWSsIfkb6wEa8ttg&usqp=CAU"
-                        class="w-44 h-44 rounded border p-0 dark:border-neutral-700 dark:bg-neutral-800"
+                        class="h-44 max-w-md mx-auto rounded border p-0 dark:border-neutral-700 dark:bg-neutral-800"
                         alt="..." />                 
                     </div>
                 </div>
