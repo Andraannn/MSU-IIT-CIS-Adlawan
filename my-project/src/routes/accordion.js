@@ -19,125 +19,105 @@ const data = [
   {
     question: <p className='font-bold'>PERSONAL INFORMATION</p>,
     answer: <ul className='flex flex-wrap font-semibold'>
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="country-option-1" class="block ml-2 text-sm font-medium text-black">Patient Type: </label>
+            <div className="grid grid-cols-1 gap-x-12">
+        <div className="col-span-1 grid place-items-center">
+                <div className="font-bold text-center">PATIENT TYPE:
+                    <div className="grid grid-flow-col auto-cols-max p-2.5">
+                        <div>
+                            <div class="flex flex-row">
+                                <input id="per_stud" type="radio" name="Patient" value="Student" class="flex items-center mr-4 w-4 h-4"/>
+                                <label for="per_stud" class="block mr-4 text-sm font-medium text-black"> Student</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex flex-row">
+                                <input id="per_pat" type="radio" name="Patient" value="Faculty" class="flex items-center mr-4 w-4 h-4"/>
+                                <label for="per_pat" class="block mr-4 text-sm font-medium text-black"> Faculty</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex flex-row">
+                                <input id="per_staff" type="radio" name="Patient" value="Staff" class="flex items-center mr-4 w-4 h-4"/>
+                                <label for="per_staff" class="block mr-4 text-sm font-medium text-black"> Staff</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
 
-          <div class="flex items-center mb-4 space-x-4">
-              
-              <input id="country-option-1" type="radio" name="Patient" value="Student" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="country-option-1" class="block ml-2 text-sm font-medium text-black"> Student</label>
+			    <div className="font-bold text-center">ID NUMBER:
+                    <div className="col-span-3 lg:col-span-1">
+                        <input type="number" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2" required/>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-x-12"> 
+            {/* patient input */}
+            
+            {/* end patient input */}
+	        <div class="col-span-3 lg:col-span-1">
+		        <div className="font-bold">PHOTO:
+                    <div className="col-span-3 lg:col-span-1">
+                        <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYVEvttsDPxq1WlChcFuWSsIfkb6wEa8ttg&usqp=CAU"
+                        class="h-44 max-w-md mx-auto rounded border p-0 dark:border-neutral-700 dark:bg-neutral-800"
+                        alt="..." />                 
+                    </div>
+                </div>
+          
+			    <div className="font-bold">FULL NAME:</div>
+                    <div>
+                        <input type="text" id="full_name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+		    </div>
+		  
+		          
+            <div class="col-span-3 lg:col-span-1">
+                <div className="font-bold">COLLEGE/DEPT.:
+                    <div>
+                        <input type="text" id="colldept" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div> 
+                <div className="font-bold">DATE OF BIRTH:
+                    <div>
+                        <input type="text" id="bdate" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+                <div className="font-bold">AGE:
+                    <div>
+                        <input type="text" id="age" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+                <div className="font-bold">SEX:
+                    <div>
+                        <input type="text" id="sex" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+            </div>
 
-              <input id="country-option-2" type="radio" name="Patient" value="Faculty" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="country-option-2" class="block ml-2 text-sm font-medium text-black"> Faculty</label>
-
-              <input id="country-option-3" type="radio" name="Patient" value="Staff" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="country-option-3" class="block ml-2 text-sm font-medium text-black"> Staff</label>
-
-          </div>
-      </li>
-
-     
- <li className='w-1/3 p-4 border-r text-black border-black '>
-          <label for="civil">College: </label>
-          <form action="/action_page.php">
-                    <select name="civil" id="civil">
-                        <option value="singol">CCS </option>
-                        <option value="mared">CSM</option>
-                        <option value="bulag">CASS</option>
-                        <option value="seperet">COET</option>
-                        <option value="wedow">CEBA</option>
-                        <option value="wedow">CED</option>
-                        <option value="wedow">CHS</option>
-                    </select>
-            </form>
-      </li>
-
-      <li className='w-1/3 p-4 '>
-          <div>
-          <label for="others" class="block mb-2 text-sm font-medium text-black">ID NUMBER: </label>
-           <input type="number" id="first_name" class="border border-gray-300 w-48 text-black rounded-lg  p-.5" required/>
-        </div>  
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-          <div>
-             <label for="last_name" class="block mb-2 text-sm font-medium text-black">First name: </label>
-              <input type="text" id="last_name" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-           </div>
-      </li>
-      <li className='w-1/3 p-4 border-r border-black'>
-          <div>
-            <label for="company" class="block mb-2 text-sm font-medium text-black">Middle name: </label>
-            <input type="text" id="company" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 "  required/>
-         </div> 
-      </li>
-
-      <li className='w-1/3 p-4 '>
-         <div>
-            <label for="first_name" class="block mb-2 text-sm font-medium text-black">Last name: </label>
-            <input type="text" id="first_name" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black text-black'>
-          <label for="civil ">Civil Status: </label>
-          <form action="/action_page.php">
-                  <select name="civil" id="civil">
-                      <option value="singol">Single </option>
-                      <option value="mared">Married</option>
-                      <option value="bulag">Divorced</option>
-                      <option value="seperet">Separated</option>
-                      <option value="wedow">Widowed</option>
-                  </select>
-          </form>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black text-black'> 
-          <form action="/action_page.php">
-              <label for="birthday">Date of Birth: </label>
-              <input type="date" id="birthday" name="birthday"/>
-          </form>
-      </li>
-
-<li className='w-1/3 p-4 border-r'>
-      <label for="country-option-4" class="block ml-2 text-sm font-medium text-black ">Sex:  </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-              
-              <input id="sex-option-1" type="radio" name="Sex" value="Male" class="w-4 h-4 border-gray-300 focus:focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="sex-option-1" class="block ml-2 text-sm font-medium text-black"> Male</label>
-
-              <input id="sex-option-2" type="radio" name="Sex" value="Female" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="sex-option-2" class="block ml-2 text-sm font-medium text-black"> Female</label>
-           </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-        <div>
-              <label for="Home" class="block mb-2 text-sm font-medium text-black">Home Address: </label>
-              <input type="text" id="website" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-          <div>
-              <label for="Present" class="block mb-2 text-sm font-medium text-black">Present Address: </label>
-              <input type="text" id="website" class=" border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 '>
-          <div>
-                <label for="Mobile" class="block mb-2 text-sm font-medium text-black">Mobile Number: </label>
-                <input type="number" id="visitors" class=" border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 " required/>
-          </div>
-      </li>
-
-
-      <form action="/action_page.php">
-          <label for="upload" class="block mb-2 text-sm font-medium text-black">Add Photo: </label>
-            <input type="file" id="myFile" name="filename"/>
-      </form>
+            <div class="col-span-3 lg:col-span-1">
+                <div className="font-bold">CIVIL STATUS:
+                    <div>
+                        <input type="text" id="civil" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div> 
+                <div className="font-bold">HOME ADDRESS:
+                    <div>
+                        <input type="text" id="h_add" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+                <div className="font-bold">PRESENT ADDRESS:
+                    <div>
+                        <input type="text" id="pres_add" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+                <div className="font-bold">MOBILE NUMBER:
+                    <div>
+                        <input type="text" id="mob_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                    </div>
+                </div>
+		    </div>
+        </div>
     </ul>,
   },
 
@@ -147,633 +127,675 @@ const data = [
   {
     question: <p className='font-bold '>PAST MEDICAL HISTORY</p>,
     answer: <ul className=' flex flex-wrap font-semibold'>
-     <li className='w-1/3 p-4 border-r border-black content-center'>
-      <label for="allergy-option-1" class="block ml-2 text-sm font-medium text-black ">ALLERGIES: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="allergy-option-1" type="radio" name="ALLERGIES" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="allergy-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="allergy-option-2" type="radio" name="ALLERGIES" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="allergy-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="GALLBLADDER-option-1" class="block ml-2 text-sm font-medium text-black ">GALLBLADDER STONE: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="GALLBLADDER-option-1" type="radio" name="GALLBLADDER" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="GALLBLADDER-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="GALLBLADDER-option-2" type="radio" name="GALLBLADDER" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="GALLBLADDER-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="PROSTATE-option-1" class="block ml-2 text-sm font-medium text-black ">PROSTATE PROBLEMS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="PROSTATE-option-1" type="radio" name="PROSTATE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PROSTATE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="PROSTATE-option-2" type="radio" name="PROSTATE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PROSTATE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="AMOEBIASIS-option-1" class="block ml-2 text-sm font-medium text-black ">AMOEBIASIS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="AMOEBIASIS-option-1" type="radio" name="AMOEBIASIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="AMOEBIASIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="AMOEBIASIS-option-2" type="radio" name="AMOEBIASIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="AMOEBIASIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="GOITER-option-1" class="block ml-2 text-sm font-medium text-black ">GOITER: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="GOITER-option-1" type="radio" name="GOITER" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="GOITER-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="GOITER-option-2" type="radio" name="GOITER" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="GOITER-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-
-      <li className='w-1/3 p-4'>
-      <label for="SEIZURE-option-1" class="block ml-2 text-sm font-medium text-black ">SEIZURE: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="SEIZURE-option-1" type="radio" name="SEIZURE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SEIZURE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="SEIZURE-option-2" type="radio" name="SEIZURE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SEIZURE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="ANEMIA-option-1" class="block ml-2 text-sm font-medium text-black ">ANEMIA: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="ANEMIA-option-1" type="radio" name="ANEMIA" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="ANEMIA-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="ANEMIA-option-2" type="radio" name="ANEMIA" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="ANEMIA-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="GOUT-option-1" class="block ml-2 text-sm font-medium text-black ">GOUT: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="GOUT-option-1" type="radio" name="GOUT" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="GOUT-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="GOUT-option-2" type="radio" name="GOUT" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="GOUT-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="SINUSITIS-option-1" class="block ml-2 text-sm font-medium text-black ">SINUSITIS/ALLERGIC RHINITIS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="SINUSITIS-option-1" type="radio" name="SINUSITIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SINUSITIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="SINUSITIS-option-2" type="radio" name="SINUSITIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SINUSITIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="ARTHRITIS-option-1" class="block ml-2 text-sm font-medium text-black ">ARTHRITIS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="ARTHRITIS-option-1" type="radio" name="ARTHRITIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="ARTHRITIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="ARTHRITIS-option-2" type="radio" name="ARTHRITIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="ARTHRITIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="HEMORROIDS-option-1" class="block ml-2 text-sm font-medium text-black ">HEMORROIDS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="HEMORROIDS-option-1" type="radio" name="HEMORROIDS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HEMORROIDS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="HEMORROIDS-option-2" type="radio" name="HEMORROIDS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HEMORROIDS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="SKIN-option-1" class="block ml-2 text-sm font-medium text-black ">SKIN DISORDERS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="SKIN-option-1" type="radio" name="SKIN" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SKIN-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="SKIN-option-2" type="radio" name="SKIN" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SKIN-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="BACK-option-1" class="block ml-2 text-sm font-medium text-black ">BACK AND JOINT PAINS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="BACK-option-1" type="radio" name="BACK" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="BACK-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="BACK-option-2" type="radio" name="BACK" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="BACK-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="HEPATITIS-option-1" class="block ml-2 text-sm font-medium text-black ">HEPATITIS: A/B/C: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="HEPATITIS-option-1" type="radio" name="HEPATITIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HEPATITIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="HEPATITIS-option-2" type="radio" name="HEPATITIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HEPATITIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 '>
-      <label for="STI-option-1" class="block ml-2 text-sm font-medium text-black ">STI/HIV: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="STI-option-1" type="radio" name="STI" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="STI-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="STI-option-2" type="radio" name="STI" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="STI-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="BONE-option-1" class="block ml-2 text-sm font-medium text-black ">BONE FRACTURE: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="BONE-option-1" type="radio" name="BONE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="BONE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="BONE-option-2" type="radio" name="BONE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="BONE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="HYPER-option-1" class="block ml-2 text-sm font-medium text-black ">HYPER ACIDITY/ULCER: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="HYPER-option-1" type="radio" name="HYPER" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HYPER-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="HYPER-option-2" type="radio" name="HYPER" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HYPER-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 '>
-      <label for="STROKE-option-1" class="block ml-2 text-sm font-medium text-black ">STROKE: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="STROKE-option-1" type="radio" name="STROKE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="STROKE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="STROKE-option-2" type="radio" name="STROKE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="STROKE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="BREAST-option-1" class="block ml-2 text-sm font-medium text-black ">BREAST MASS/ LUMP: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="BREAST-option-1" type="radio" name="BREAST" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="BREAST-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="BREAST-option-2" type="radio" name="BREAST" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="BREAST-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="HYPERTENSION-option-1" class="block ml-2 text-sm font-medium text-black ">HYPERTENSION: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="HYPERTENSION-option-1" type="radio" name="HYPERTENSION" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HYPERTENSION-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="HYPERTENSION-option-2" type="radio" name="HYPERTENSION" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="HYPERTENSION-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="SURGERY-option-1" class="block ml-2 text-sm font-medium text-black ">SURGERY/INJURY: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="SURGERY-option-1" type="radio" name="SURGERY" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SURGERY-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="SURGERY-option-2" type="radio" name="SURGERY" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SURGERY-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="PAINS-option-1" class="block ml-2 text-sm font-medium text-black ">CHEST PAINS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="PAINS-option-1" type="radio" name="PAINS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PAINS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="PAINS-option-2" type="radio" name="PAINS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PAINS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="KIDNEY-option-1" class="block ml-2 text-sm font-medium text-black ">KIDNEY/BLADDER STONES: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="KIDNEY-option-1" type="radio" name="KIDNEY" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="KIDNEY-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="KIDNEY-option-2" type="radio" name="KIDNEY" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="KIDNEY-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="THYROID-option-1" class="block ml-2 text-sm font-medium text-black ">THYROID PROBLEMS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="THYROID-option-1" type="radio" name="THYROID" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="THYROID-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="THYROID-option-2" type="radio" name="THYROID" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="THYROID-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="CHICKEN-option-1" class="block ml-2 text-sm font-medium text-black ">CHICKEN POX: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="CHICKEN-option-1" type="radio" name="CHICKEN" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="CHICKEN-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="CHICKEN-option-2" type="radio" name="CHICKEN" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="CHICKEN-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="LOSS-option-1" class="block ml-2 text-sm font-medium text-black ">LOSS OF CONCIOUSNESS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="LOSS-option-1" type="radio" name="LOSS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="LOSS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="LOSS-option-2" type="radio" name="LOSS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="LOSS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="TONSILLITIS-option-1" class="block ml-2 text-sm font-medium text-black ">TONSILLITIS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="TONSILLITIS-option-1" type="radio" name="TONSILLITIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="TONSILLITIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="TONSILLITIS-option-2" type="radio" name="TONSILLITIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="TONSILLITIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="DIABETES-option-1" class="block ml-2 text-sm font-medium text-black ">DIABETES MELLITUS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="DIABETES-option-1" type="radio" name="DIABETES" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="DIABETES-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="DIABETES-option-2" type="radio" name="DIABETES" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="DIABETES-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="MEASLES-option-1" class="block ml-2 text-sm font-medium text-black ">MEASLES: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="MEASLES-option-1" type="radio" name="MEASLES" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MEASLES-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="MEASLES-option-2" type="radio" name="MEASLES" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MEASLES-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="TUBERCULOSIS-option-1" class="block ml-2 text-sm font-medium text-black ">TUBERCULOSIS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="TUBERCULOSIS-option-1" type="radio" name="TUBERCULOSIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="TUBERCULOSIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="TUBERCULOSIS-option-2" type="radio" name="TUBERCULOSIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="TUBERCULOSIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="EPILEPSY-option-1" class="block ml-2 text-sm font-medium text-black ">EPILEPSY: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="EPILEPSY-option-1" type="radio" name="EPILEPSY" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EPILEPSY-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="EPILEPSY-option-2" type="radio" name="EPILEPSY" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EPILEPSY-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="MUMPS-option-1" class="block ml-2 text-sm font-medium text-black ">MUMPS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="MUMPS-option-1" type="radio" name="MUMPS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MUMPS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="MUMPS-option-2" type="radio" name="MUMPS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MUMPS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="UTI-option-1" class="block ml-2 text-sm font-medium text-black ">UTI: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="UTI-option-1" type="radio" name="UTI" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="UTI-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="UTI-option-2" type="radio" name="UTI" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="UTI-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="EYE-option-1" class="block ml-2 text-sm font-medium text-black ">EYE OR EAR PROBLEM: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="EYE-option-1" type="radio" name="EYE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EYE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="EYE-option-2" type="radio" name="EYE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EYE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="PNEUMONIA-option-1" class="block ml-2 text-sm font-medium text-black ">PNEUMONIA: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="PNEUMONIA-option-1" type="radio" name="PNEUMONIA" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PNEUMONIA-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="PNEUMONIA-option-2" type="radio" name="PNEUMONIA" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PNEUMONIA-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-
-
-          <div class="flex items-center mb-4 space-x-4">
-
-            <label for="others" class="block mb-2 text-sm font-medium text-black">OTHERS: </label>
-            <input type="text" id="first_name" class="border border-gray-300 w-full text-black rounded-lg  p-2.5" required/>
-
-          </div>
-      </li>
-    </ul>,
-    
-
-
-
-
-  }
-
-
-
-  ,{
-    question: <p className='font-bold'>FAMILY HISTORY</p>,
-    answer: <ul className='flex flex-wrap font-semibold'>
-     
-     <li className='w-1/3 p-4 border-r border-black'>
-      <label for="MEASLES-option-1" class="block ml-2 text-sm font-medium text-black ">HIGH BLOOD PRESSURE: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="MEASLES-option-1" type="radio" name="MEASLES" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MEASLES-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="MEASLES-option-2" type="radio" name="MEASLES" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MEASLES-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="TUBERCULOSIS-option-1" class="block ml-2 text-sm font-medium text-black ">TUBERCULOSIS: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="TUBERCULOSIS-option-1" type="radio" name="TUBERCULOSIS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="TUBERCULOSIS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="TUBERCULOSIS-option-2" type="radio" name="TUBERCULOSIS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="TUBERCULOSIS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="EPILEPSY-option-1" class="block ml-2 text-sm font-medium text-black ">HEART DISEASE: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="EPILEPSY-option-1" type="radio" name="EPILEPSY" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EPILEPSY-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="EPILEPSY-option-2" type="radio" name="EPILEPSY" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EPILEPSY-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="MUMPS-option-1" class="block ml-2 text-sm font-medium text-black ">ASTHMA: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="MUMPS-option-1" type="radio" name="MUMPS" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MUMPS-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="MUMPS-option-2" type="radio" name="MUMPS" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MUMPS-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="UTI-option-1" class="block ml-2 text-sm font-medium text-black ">DIABETES: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="UTI-option-1" type="radio" name="UTI" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="UTI-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="UTI-option-2" type="radio" name="UTI" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="UTI-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="EYE-option-1" class="block ml-2 text-sm font-medium text-black ">ALLERGIES: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="EYE-option-1" type="radio" name="EYE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EYE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="EYE-option-2" type="radio" name="EYE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="EYE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 border-r border-black'>
-      <label for="PNEUMONIA-option-1" class="block ml-2 text-sm font-medium text-black ">CANCER: </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="PNEUMONIA-option-1" type="radio" name="PNEUMONIA" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PNEUMONIA-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="PNEUMONIA-option-2" type="radio" name="PNEUMONIA" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="PNEUMONIA-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-
-
-          <div class="flex items-center mb-4 space-x-4">
-
-            <label for="others" class="block mb-2 text-sm font-medium text-black">ANY OTHER HEREDITARY DISEASE: </label>
-            <input type="text" id="first_name" class="border border-gray-300 w-full text-black rounded-lg  p-2.5" required/>
-
-          </div>
-      </li>
+            <div className="grid grid-cols-2">
+            {/* item */}
+                <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                    <div className="col-span-1">
+                        <p className="font-bold mr-2">ALLERGIES</p> 
+                    </div>
+                    <div className="col-span-2">
+                        <span className="font-bold mr-2">:</span> 
+                        <input type="radio" className="inline-flex" id="allergies_y" name="allergies" value="Yes"/>
+                        <label className="mr-5" htmlFor="allergies_y">YES</label>
+                        <input type="radio" className="inline-flex" id="allergies_n" name="allergies" value="No" defaultChecked/>
+                        <label className="mr-2" htmlFor="allergies_n">NO</label>
+                    </div>
+                </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">GALLBLADDER STONE</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="gall_y" name="gallbladder" value="Yes"/>
+                    <label className="mr-5" htmlFor="gall_y">YES</label>
+                    <input type="radio" className="inline-flex" id="gall_n" name="gallbladder" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="gall_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">PROSTATE PROBLEMS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="pros_y" name="prostate" value="Yes"/>
+                    <label className="mr-5" htmlFor="pros_y">YES</label>
+                    <input type="radio" className="inline-flex" id="pros_n" name="prostate" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="pros_n">NO</label>
+                </div>
+                
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">AMOEBIASIS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="amoeb_y" name="amoebiasis" value="Yes"/>
+                    <label className="mr-5" htmlFor="amoeb_y">YES</label>
+                    <input type="radio" className="inline-flex" id="amoeb_n" name="amoebiasis" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="amoeb_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">GOITER</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="goiter_y" name="goiter" value="Yes"/>
+                    <label className="mr-5" htmlFor="goiter_y">YES</label>
+                    <input type="radio" className="inline-flex" id="goiter_n" name="goiter" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="goiter_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">SEIZURE</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="seiz_y" name="seizure" value="Yes"/>
+                    <label className="mr-5" htmlFor="seiz_y">YES</label>
+                    <input type="radio" className="inline-flex" id="seiz_n" name="seizure" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="seiz_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">ANEMIA</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="anemia_y" name="anemia" value="Yes"/>
+                    <label className="mr-5" htmlFor="anemia_y">YES</label>
+                    <input type="radio" className="inline-flex" id="anemia_n" name="anemia" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="anemia_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">GOUT</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="gout_y" name="gout" value="Yes"/>
+                    <label className="mr-5" htmlFor="gout_y">YES</label>
+                    <input type="radio" className="inline-flex" id="gout_n" name="gout" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="gout_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">SINUSITIS/ALLERGIC RHINITIS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="sinus_y" name="sinusitis_allergic" value="Yes"/>
+                    <label className="mr-5" htmlFor="sinus_y">YES</label>
+                    <input type="radio" className="inline-flex" id="sinus_n" name="sinusitis_allergic" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="sinus_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">ARTHRITIS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="arth_y" name="arthritis" value="Yes"/>
+                    <label className="mr-5" htmlFor="arth_y">YES</label>
+                    <input type="radio" className="inline-flex" id="arth_n" name="arthritis" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="arth_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">HEMORROIDS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="hemor_y" name="hemorroids" value="Yes"/>
+                    <label className="mr-5" htmlFor="hemor_y">YES</label>
+                    <input type="radio" className="inline-flex" id="hemor_n" name="hemorroids" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="hemor_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">SKIN DISORDERS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="skin_y" name="skin_disorders" value="Yes"/>
+                    <label className="mr-5" htmlFor="skin_y">YES</label>
+                    <input type="radio" className="inline-flex" id="skin_n" name="skin_disorders" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="skin_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">BACK AND JOINT PAINS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="back_y" name="back_joint_pains" value="Yes"/>
+                    <label className="mr-5" htmlFor="back_y">YES</label>
+                    <input type="radio" className="inline-flex" id="back_n" name="back_joint_pains" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="back_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">HEPATITIS: A/B/C</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="hepa_y" name="hepatitis" value="Yes"/>
+                    <label className="mr-5" htmlFor="hepa_y">YES</label>
+                    <input type="radio" className="inline-flex" id="hepa_n" name="hepatitis" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="hepa_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">STI/HIV</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="sti_y" name="sti_hiv" value="Yes"/>
+                    <label className="mr-5" htmlFor="sti_y">YES</label>
+                    <input type="radio" className="inline-flex" id="sti_n" name="sti_hiv" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="sti_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">BONE FRACTURE</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="bone_y" name="bone_fracture" value="Yes"/>
+                    <label className="mr-5" htmlFor="bone_y">YES</label>
+                    <input type="radio" className="inline-flex" id="bone_n" name="bone_fracture" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="bone_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">HYPER ACIDITY/ULCER</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="hypera_y" name="hyperacidity_ulcer" value="Yes"/>
+                    <label className="mr-5" htmlFor="hypera_y">YES</label>
+                    <input type="radio" className="inline-flex" id="hypera_n" name="hyperacidity_ulcer" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="hypera_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">STROKE</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="stroke_y" name="stroke" value="Yes"/>
+                    <label className="mr-5" htmlFor="stroke_y">YES</label>
+                    <input type="radio" className="inline-flex" id="stroke_n" name="stroke" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="stroke_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">BREAST MASS/ LUMP</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="breast_y" name="breastmass_lump" value="Yes"/>
+                    <label className="mr-5" htmlFor="breast_y">YES</label>
+                    <input type="radio" className="inline-flex" id="breast_n" name="breastmass_lump" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="breast_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">HYPERTENSION</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="hypert_y" name="hypertension" value="Yes"/>
+                    <label className="mr-5" htmlFor="hypert_y">YES</label>
+                    <input type="radio" className="inline-flex" id="hypert_n" name="hypertension" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="hypert_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">SURGERY/INJURY</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="surgery_y" name="surgery_injury" value="Yes"/>
+                    <label className="mr-5" htmlFor="surgery_y">YES</label>
+                    <input type="radio" className="inline-flex" id="surgery_n" name="surgery_injury" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="surgery_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">CHEST PAINS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="chest_y" name="chest_pains" value="Yes"/>
+                    <label className="mr-5" htmlFor="chest_y">YES</label>
+                    <input type="radio" className="inline-flex" id="chest_n" name="chest_pains" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="chest_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">KIDNEY/BLADDER STONES</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="kidney_y" name="kidney_bladder" value="Yes"/>
+                    <label className="mr-5" htmlFor="kidney_y">YES</label>
+                    <input type="radio" className="inline-flex" id="kidney_n" name="kidney_bladder" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="kidney_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">THYROID PROBLEMS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="thyroid_y" name="thyroid_problems" value="Yes"/>
+                    <label className="mr-5" htmlFor="thyroid_y">YES</label>
+                    <input type="radio" className="inline-flex" id="thyroid_n" name="thyroid_problems" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="thyroid_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">CHICKEN POX</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="chipox_y" name="chicken_pox" value="Yes"/>
+                    <label className="mr-5" htmlFor="chipox_y">YES</label>
+                    <input type="radio" className="inline-flex" id="chipox_n" name="chicken_pox" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="chipox_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">LOSS OF CONCIOUSNESS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="loss_y" name="loss_conciousness" value="Yes"/>
+                    <label className="mr-5" htmlFor="loss_y">YES</label>
+                    <input type="radio" className="inline-flex" id="loss_n" name="loss_conciousness" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="loss_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">TONSILLITIS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="tonsil_y" name="tonsillitis" value="Yes"/>
+                    <label className="mr-5" htmlFor="tonsil_y">YES</label>
+                    <input type="radio" className="inline-flex" id="tonsil_n" name="tonsillitis" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="tonsil_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">DIABETES MELLITUS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="diabm_y" name="diabetes_mellitus" value="Yes"/>
+                    <label className="mr-5" htmlFor="diabm_y">YES</label>
+                    <input type="radio" className="inline-flex" id="diabm_n" name="diabetes_mellitus" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="diabm_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">MEASLES</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="meas_y" name="measles" value="Yes"/>
+                    <label className="mr-5" htmlFor="meas_y">YES</label>
+                    <input type="radio" className="inline-flex" id="meas_n" name="measles" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="meas_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">TUBERCULOSIS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="tuber_y" name="tuberculosis" value="Yes"/>
+                    <label className="mr-5" htmlFor="tuber_y">YES</label>
+                    <input type="radio" className="inline-flex" id="tuber_n" name="tuberculosis" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="tuber_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">EPILEPSY</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="epil_y" name="epilepsy" value="Yes"/>
+                    <label className="mr-5" htmlFor="epil_y">YES</label>
+                    <input type="radio" className="inline-flex" id="epil_n" name="epilepsy" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="epil_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">MUMPS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="mumps_y" name="mumps" value="Yes"/>
+                    <label className="mr-5" htmlFor="mumps_y">YES</label>
+                    <input type="radio" className="inline-flex" id="mumps_n" name="mumps" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="mumps_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">UTI</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="uti_y" name="uti" value="Yes"/>
+                    <label className="mr-5" htmlFor="uti_y">YES</label>
+                    <input type="radio" className="inline-flex" id="uti_n" name="uti" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="uti_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">EYE OR EAR PROBLEM</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="eye_y" name="eye_or_ear" value="Yes"/>
+                    <label className="mr-5" htmlFor="eye_y">YES</label>
+                    <input type="radio" className="inline-flex" id="eye_n" name="eye_or_ear" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="eye_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">PNEUMONIA</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="radio" className="inline-flex" id="pneum_y" name="pneumonia" value="Yes"/>
+                    <label className="mr-5" htmlFor="pneum_y">YES</label>
+                    <input type="radio" className="inline-flex" id="pneum_n" name="pneumonia" value="No" defaultChecked/>
+                    <label className="mr-2" htmlFor="pneum_n">NO</label>
+                </div>
+            </div>
+            {/*end item*/}
+
+            {/* item */}
+            <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                <div className="col-span-1">
+                    <p className="font-bold mr-2">OTHERS</p> 
+                </div>
+                <div className="col-span-2">
+                    <span className="font-bold mr-2">:</span> 
+                    <input type="text" className="inline-flex border border-black py-1 px-2" />
+                </div>
+                
+            </div>
+            {/*end item*/}
+            </div>
+        
+        </ul>,
+        
+    }
+
+
+    ,{
+        question: <p className='font-bold'>FAMILY HISTORY</p>,
+        answer: <ul className='flex flex-wrap font-semibold'>
+                    <div className="grid grid-cols-2">
+                    {/* item */}
+                        <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                            <div className="col-span-1">
+                                <p className="font-bold mr-2">HIGH BLOOD PRESSURE</p> 
+                            </div>
+                            <div className="col-span-2">
+                                <span className="font-bold mr-2">:</span> 
+                                <input type="radio" className="inline-flex" id="HBP_y" name="fam_high_blood_pressure" value="Yes"/>
+                                <label className="mr-5" htmlFor="HBP_y">YES</label>
+                                <input type="radio" className="inline-flex" id="HBP_n" name="fam_high_blood_pressure" value="No" defaultChecked/>
+                                <label className="mr-2" htmlFor="HBP_n">NO</label>
+                            </div>
+                        </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                        <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                            <div className="col-span-1">
+                                <p className="font-bold mr-2">TUBERCULOSIS</p> 
+                            </div>
+                            <div className="col-span-2">
+                                <span className="font-bold mr-2">:</span> 
+                                <input type="radio" className="inline-flex" id="tuberc_y" name="fam_tuberculosis" value="Yes"/>
+                                <label className="mr-5" htmlFor="tuberc_y">YES</label>
+                                <input type="radio" className="inline-flex" id="tuberc_n" name="fam_tuberculosis" value="No" defaultChecked/>
+                                <label className="mr-2" htmlFor="tuberc_n">NO</label>
+                            </div>
+                        </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                        <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                            <div className="col-span-1">
+                                <p className="font-bold mr-2">HEART DISEASE</p> 
+                            </div>
+                            <div className="col-span-2">
+                                <span className="font-bold mr-2">:</span> 
+                                <input type="radio" className="inline-flex" id="HD_y" name="fam_heart_disease" value="Yes"/>
+                                <label className="mr-5" htmlFor="HD_y">YES</label>
+                                <input type="radio" className="inline-flex" id="HD_n" name="fam_heart_disease" value="No" defaultChecked/>
+                                <label className="mr-2" htmlFor="HD_n">NO</label>
+                            </div>
+                        </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                        <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                            <div className="col-span-1">
+                                <p className="font-bold mr-2">ASTHMA</p> 
+                            </div>
+                            <div className="col-span-2">
+                                <span className="font-bold mr-2">:</span> 
+                                <input type="radio" className="inline-flex" id="HD_y" name="fam_asthma" value="Yes"/>
+                                <label className="mr-5" htmlFor="HD_y">YES</label>
+                                <input type="radio" className="inline-flex" id="HD_n" name="fam_asthma" value="No" defaultChecked/>
+                                <label className="mr-2" htmlFor="HD_n">NO</label>
+                            </div>
+                        </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                    <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                        <div className="col-span-1">
+                            <p className="font-bold mr-2">DIABETES</p> 
+                        </div>
+                        <div className="col-span-2">
+                            <span className="font-bold mr-2">:</span> 
+                            <input type="radio" className="inline-flex" id="diab_y" name="fam_diabetes" value="Yes"/>
+                            <label className="mr-5" htmlFor="diab_y">YES</label>
+                            <input type="radio" className="inline-flex" id="diab_n" name="fam_diabetes" value="No" defaultChecked/>
+                            <label className="mr-2" htmlFor="diab_n">NO</label>
+                        </div>
+                    </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                    <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                        <div className="col-span-1">
+                            <p className="font-bold mr-2">ALLERGIES</p> 
+                        </div>
+                        <div className="col-span-2">
+                            <span className="font-bold mr-2">:</span> 
+                            <input type="radio" className="inline-flex" id="falgry_y" name="fam_allergies" value="Yes"/>
+                            <label className="mr-5" htmlFor="falgry_y">YES</label>
+                            <input type="radio" className="inline-flex" id="falgry_n" name="fam_allergies" value="No" defaultChecked/>
+                            <label className="mr-2" htmlFor="falgry_n">NO</label>
+                        </div>
+                    </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                    <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
+                        <div className="col-span-1">
+                            <p className="font-bold mr-2">CANCER</p> 
+                        </div>
+                        <div className="col-span-2">
+                            <span className="font-bold mr-2">:</span> 
+                            <input type="radio" className="inline-flex" id="famcan_y" name="fam_cancer" value="Yes"/>
+                            <label className="mr-5" htmlFor="famcan_y">YES</label>
+                            <input type="radio" className="inline-flex" id="famcan_n" name="fam_cancer" value="No" defaultChecked/>
+                            <label className="mr-2" htmlFor="famcan_y">NO</label>
+                        </div>
+                    </div>
+                    {/*end item*/}
+
+                    {/* item */}
+                    <div className="col-span-2 lg:col-span-1 grid grid-cols-3 items-center mt-4">
+                        <div className="col-span-1">
+                            <p className="font-bold mr-2">ANY OTHER HEREDITARY DISEASE</p> 
+                        </div>
+                        <div className="col-span-2">
+                            <span className="font-bold mr-2">:</span> 
+                            <input type="text" className="inline-flex border border-black py-1 px-2" />
+                        </div>   
+                    </div>
+                    {/*end item*/}
+            </div>
     </ul>,
   },
-
-
 
 
   {
@@ -799,7 +821,7 @@ const data = [
       <li className='w-1/3 p-4 py-0'>
           <div>
              <label for="packs" class="block mb-2 text-sm font-medium text-black">if yes, how many packs?: (indicate if per days/months) </label>
-              <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+              <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
            </div>
       </li>
 
@@ -822,10 +844,10 @@ const data = [
 
           <div class="flex items-center mb-4 space-x-4">
 
-              <input id="FREQUENT-option-1" type="radio" name="FREQUENT" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
+              <input id="FREQUENT-option-1" type="radio" name="FREQUENT" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"/>
               <label for="FREQUENT-option-1" class="block ml-2 text-sm font-medium text-black"> OCCASIONAL</label>
 
-              <input id="FREQUENT-option-2" type="radio" name="FREQUENT" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
+              <input id="FREQUENT-option-2" type="radio" name="FREQUENT" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"/>
               <label for="FREQUENT-option-2" class="block ml-2 text-sm font-medium text-black">SELDOM </label>
 
           </div>
@@ -864,50 +886,96 @@ const data = [
 {
   question: <p className='font-bold'>VITAL SIGNS AND OTHERS</p>,
    answer: <ul className='font-semibold'>
+            <div class="grid grid-cols-2 space-x-2">
+	            <div class="col-span-2 lg:col-span-1">
+                    <p className='font-bold underline'>VITAL SIGNS</p>
+                        <div>
+                            <label for="TEMP" class="block mb-2 text-sm font-medium text-black">TEMPERATURE (C): </label>
+                            <input type="number" id="TEMP" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                        </div>
+                        <div> 
+                            <label for="PULSE" class="block mb-2 text-sm font-medium text-black">PULSE RATE (BPM)</label>
+                            <input type="number" id="PULSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                        </div>
+                        <div>
+                            <label for="REST" class="block mb-2 text-sm font-medium text-black">RESTING RATE (BPM) </label>
+                            <input type="number" id="REST" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                        </div>
+                        <div>
+                            <label for="BLOOD" class="block mb-2 text-sm font-medium text-black">BLOOD PRESSURE (MMHG): </label>
+                            <input type="number" id="BLOOD" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                        </div>
+                        <div>
+                            <label for="WEIGHT" class="block mb-2 text-sm font-medium text-black">WEIGHT (KG): </label>
+                            <input type="number" id="WEIGHT" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                        </div>
+	            </div>
+                    <div class="col-span-2 lg:col-span-1">
+                        <p className='font-bold underline'>NURSING INTERVENTIONS</p>
+                            <div>
+                                <div>
+                                    <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                                    <input type="text" id="MED" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                                </div>
+                            <div>
+                                <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                                <input type="text" id="NURSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' required/>
+                            </div>
 
-<p className='font-bold underline'>VITAL SIGNS</p>
-
-        <div class="grid grid-rows-5 grid-flow-col gap-4">
+                                <div>
+                                    <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Time: </label>
+                                    <input
+                                    className="px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
+                                    type="time"
+                                    value={time}
+                                    onChange={handleTimeChange}
+                                    />
+                                </div>
+                            </div>
                 <div>
-                        <label for="TEMP" class="block mb-2 text-sm font-medium text-black">TEMPERATURE (C): </label>
-                        <input type="number" id="TEMP" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-                </div>
-                <div> 
-                        <label for="PULSE" class="block mb-2 text-sm font-medium text-black">PULSE RATE (BPM)</label>
-                        <input type="number" id="PULSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-                </div>
-                <div>
-                        <label for="REST" class="block mb-2 text-sm font-medium text-black">RESTING RATE (BPM) </label>
-                        <input type="number" id="REST" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-                </div>
-                <div>
-                        <label for="BLOOD" class="block mb-2 text-sm font-medium text-black">BLOOD PRESSURE (MMHG): </label>
-                        <input type="number" id="BLOOD" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-                </div>
-                <div>
-                        <label for="WEIGHT" class="block mb-2 text-sm font-medium text-black">WEIGHT (KG): </label>
-                        <input type="number" id="WEIGHT" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-                </div>
-
-                    <p className='font-bold underline'>NURSING INTERVENTIONS</p>
+                    <div>
+                        <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                        <input type="text" id="MED" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                    </div>
+                    <div>
+                        <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                        <input type="text" id="NURSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' required/>
+                    </div>
 
                     <div>
-                            <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
-                            <input type="text" id="MED" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
+                        <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Time: </label>
+                        <input
+                            className="px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
+                            type="time"
+                            value={time}
+                            onChange={handleTimeChange}
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                        <input type="text" id="MED" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
                     </div>
                     <div>
-                            <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
-                            <input type="text" id="NURSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' required/>
+                        <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                        <input type="text" id="NURSE" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' required/>
                     </div>
 
-                    <div className="flex items-center">
-                            <input
-                                className="w-28 px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
-                                type="time"
-                                value={time}
-                                onChange={handleTimeChange}
-                            />
+                    <div>
+                        <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Time: </label>
+                        <input
+                            className="px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
+                            type="time"
+                            value={time}
+                            onChange={handleTimeChange}
+                        />
                     </div>
+                </div>
+                
+            </div>
+	    <div nursing interventions/>
         </div>
   </ul>,
 },
