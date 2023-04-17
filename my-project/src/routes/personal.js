@@ -1,9 +1,9 @@
 function PersonalInformation(){
     return (
         <>
-        <div class="grid grid-cols-3 gap-x-12">
-	        <div class="col-span-3 lg:col-span-1">
-			    <div className="font-bold">PATIENT TYPE:
+        <div className="grid grid-cols-1 gap-x-12">
+        <div className="col-span-1 grid place-items-center">
+                <div className="font-bold text-center">PATIENT TYPE:
                     <div className="grid grid-flow-col auto-cols-max p-2.5">
                         <div>
                             <div class="flex flex-row">
@@ -26,15 +26,24 @@ function PersonalInformation(){
                     </div>
                 </div> 
 
-			    <div className="font-bold">ID NUMBER:
+			    <div className="font-bold text-center">ID NUMBER:
                     <div className="col-span-3 lg:col-span-1">
-                        <input type="number" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="number" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2" required/>
                     </div>  
                 </div>
-
-		        <div className="font-bold">ADD PHOTO:
-                    <div className="col-span-3 lg:col-span-1">
-                        <input type="file" id="myFile" class="text-gray-900 text-sm rounded-lg block w-full p-2.5" name="filename"/>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-x-12"> 
+            {/* patient input */}
+            
+            {/* end patient input */}
+	        <div class="col-span-3 lg:col-span-1">
+		        <div className="font-bold">PHOTO:
+                    <div className="px-36 col-span-3 lg:col-span-1">
+                        <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYVEvttsDPxq1WlChcFuWSsIfkb6wEa8ttg&usqp=CAU"
+                        class="w-44 h-44 rounded border p-0 dark:border-neutral-700 dark:bg-neutral-800"
+                        alt="..." />                 
                     </div>
                 </div>
           
