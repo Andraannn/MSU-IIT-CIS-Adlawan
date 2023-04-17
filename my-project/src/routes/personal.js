@@ -7,19 +7,19 @@ function PersonalInformation(){
                     <div className="grid grid-flow-col auto-cols-max p-2.5">
                         <div>
                             <div class="flex flex-row">
-                                <input id="per_stud" type="radio" name="Patient" value="Student" class="flex items-center mr-4 w-4 h-4 border-blue-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-blue-700 dark:border-blue-600" checked/>
+                                <input id="per_stud" type="radio" name="Patient" value="Student" class="flex items-center mr-4 w-4 h-4"/>
                                 <label for="per_stud" class="block mr-4 text-sm font-medium text-black"> Student</label>
                             </div>
                         </div>
                         <div>
                             <div class="flex flex-row">
-                                <input id="per_pat" type="radio" name="Patient" value="Faculty" class="flex items-center mr-4 w-4 h-4 border-blue-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-blue-700 dark:border-blue-600" checked/>
+                                <input id="per_pat" type="radio" name="Patient" value="Faculty" class="flex items-center mr-4 w-4 h-4"/>
                                 <label for="per_pat" class="block mr-4 text-sm font-medium text-black"> Faculty</label>
                             </div>
                         </div>
                         <div>
                             <div class="flex flex-row">
-                                <input id="per_staff" type="radio" name="Patient" value="Staff" class="flex items-center mr-4 w-4 h-4 border-blue-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-blue-700 dark:border-blue-600" checked/>
+                                <input id="per_staff" type="radio" name="Patient" value="Staff" class="flex items-center mr-4 w-4 h-4"/>
                                 <label for="per_staff" class="block mr-4 text-sm font-medium text-black"> Staff</label>
                             </div>
                         </div>

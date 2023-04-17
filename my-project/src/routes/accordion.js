@@ -20,7 +20,7 @@ const data = [
     question: <p className='font-bold'>PERSONAL INFORMATION</p>,
     answer: <ul className='flex flex-wrap font-semibold'>
       <li className='w-1/3 p-4 border-r border-black'>
-      <label for="country-option-1" class="block ml-2 text-sm font-medium text-black ">Patient Type: </label>
+      <label for="country-option-1" class="block ml-2 text-sm font-medium text-black">Patient Type: </label>
 
           <div class="flex items-center mb-4 space-x-4">
               
