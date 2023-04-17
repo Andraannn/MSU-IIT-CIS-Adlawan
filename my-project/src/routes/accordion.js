@@ -11,9 +11,18 @@ function Accordion() {
     setSelected(i)
   }
   const [time, setTime] = useState("");
-    const handleTimeChange = (e) => {
+  const [time2, setTime2] = useState("");
+  const [time3, setTime3] = useState("");
+  const handleTimeChange = (e) => {
         setTime(e.target.value);
-    };
+};
+  const handleTimeChange2 = (e) => {
+  setTime2(e.target.value);
+};
+  const handleTimeChange3 = (e) => {
+  setTime3(e.target.value);
+};
+    
 
 const data = [
   {
@@ -801,82 +810,70 @@ const data = [
   {
     question: <p className='font-bold'>SOCIAL HISTORY</p>,
     answer: <ul className='font-semibold'>
+        <div class="flex flex-col">
+            {/* smoke */}
+            <div class="flex flex-col md:flex-row py-5">
+                <div>
+                    <p className="font-bold mr-2">Do you smoke?</p> 
+                </div>
+                <div>
+                    <input type="radio" id="smoke_y" name="smoke" value="Yes"/>
+                    <label className="mr-2 font-semibold" htmlFor="smoke_y">YES</label>
+                    <input type="radio" id="smoke_n" name="smoke" value="No" defaultChecked/>
+                    <label className="mr-2 font-semibold" htmlFor="smoke_n">NO</label>
+                </div>
+            </div>
+            {/* end smoke */}
+            <div className="">
+                <p className="font-bold mr-2">if yes, how many packs?: (indicate if per days/months)</p>
+                <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  "/>
+            </div>
+            {/* drink */}
+            <div className="flex flex-col md:flex-row py-5">
+                <div>
+                    <p className="font-bold mr-2">Do you drink?</p> 
+                </div>
+                <div>
+                    <input type="radio" id="drink_y" name="drink" value="Yes"/>
+                    <label className="mr-2 font-semibold" htmlFor="drink_y">YES</label>
+                    <input type="radio" id="drink_n" name="drink" value="No" defaultChecked/>
+                    <label className="mr-2 font-semibold" htmlFor="drink_n">NO</label>
+                </div>
+            </div>
+            {/* end drink */}
 
-<div class="grid place-items-center">
-    
-     <li className='w-1/3 p-4'>
-      <label for="SMOKE-option-1" class="block ml-2 text-sm font-medium text-black ">Do you smoke?:  </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="SMOKE-option-1" type="radio" name="SMOKE" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SMOKE-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="SMOKE-option-2" type="radio" name="SMOKE" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="SMOKE-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-   
-      <li className='w-1/3 p-4 py-0'>
-          <div>
-             <label for="packs" class="block mb-2 text-sm font-medium text-black">if yes, how many packs?: (indicate if per days/months) </label>
-              <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
-           </div>
-      </li>
-
-      <li className='w-1/3 p-4 py-0'>
-      <label for="DRINK-option-1" class="block ml-2 text-sm font-medium text-black ">Do you drink?:  </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="DRINK-option-1" type="radio" name="DRINK" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="DRINK-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="DRINK-option-2" type="radio" name="DRINK" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="DRINK-option-2" class="block ml-2 text-sm font-medium text-black"> NO</label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4 '>
-      <label for="FREQUENT-option-1" class="block ml-2 text-sm font-medium text-black ">If yes, how frequent?:  </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="FREQUENT-option-1" type="radio" name="FREQUENT" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"/>
-              <label for="FREQUENT-option-1" class="block ml-2 text-sm font-medium text-black"> OCCASIONAL</label>
-
-              <input id="FREQUENT-option-2" type="radio" name="FREQUENT" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600"/>
-              <label for="FREQUENT-option-2" class="block ml-2 text-sm font-medium text-black">SELDOM </label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-      <label for="MEDICATION-option-1" class="block ml-2 text-sm font-medium text-black ">Do you take medications at present?  </label>
-
-          <div class="flex items-center mb-4 space-x-4">
-
-              <input id="MEDICATION-option-1" type="radio" name="MEDICATION" value="yes" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MEDICATION-option-1" class="block ml-2 text-sm font-medium text-black"> YES</label>
-
-              <input id="MEDICATION-option-2" type="radio" name="MEDICATION" value="no" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked/>
-              <label for="MEDICATION-option-2" class="block ml-2 text-sm font-medium text-black">NO </label>
-
-          </div>
-      </li>
-
-      <li className='w-1/3 p-4'>
-          <div>
-             <label for="packs" class="block mb-2 text-sm font-medium text-black">if yes, please indicate: </label>
-              <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  " required/>
-           </div>
-      </li>
-
-
-    
-      </div>
+            {/* how frequent */}
+            <div className="flex flex-col md:flex-row py-5">
+                <div>
+                    <p className="font-bold mr-2 font-bold">If yes, how frequent?</p>
+                </div> 
+                <div>
+                    <input type="radio" id="occasional" name="frequency" value="Normal"/>
+                    <label className="mr-2 font-semibold" htmlFor="occasional">OCCASIONAL</label>
+                    <input type="radio" id="seldom" name="frequency" value="Abnormal"/>
+                    <label className="mr-2 font-semibold" htmlFor="seldom">SELDOM</label>
+                </div>
+            {/* end of frequency */}
+            </div>
+            {/* medications */}
+            <div className="flex flex-col md:flex-row py-5">
+                <div>
+                    <p className="font-bold mr-2">Do you take medications at present?</p> 
+                </div>
+                <div>
+                    <input type="radio" id="meds_y" name="meds" value="Yes"/>
+                    <label className="mr-2 font-semibold" htmlFor="meds_y">YES</label>
+                    <input type="radio" id="med_n" name="meds" value="No" defaultChecked/>
+                    <label className="mr-2 font-semibold" htmlFor="med_n">NO</label>
+                </div>
+            </div>
+            {/* end of medication */}
+            <div className="">
+                <p className="font-bold mr-2">if yes, please indicate:</p>
+                <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  "/>
+            </div>
+        </div>
+        {/*end item*/}
   </ul>,
   },
 
@@ -947,8 +944,8 @@ const data = [
                         <input
                             className="px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
                             type="time"
-                            value={time}
-                            onChange={handleTimeChange}
+                            value={time2}
+                            onChange={handleTimeChange2}
                         />
                     </div>
                 </div>
@@ -968,8 +965,8 @@ const data = [
                         <input
                             className="px-2 py-1 border border-gray-300 rounded-md mr-2 text-sm"
                             type="time"
-                            value={time}
-                            onChange={handleTimeChange}
+                            value={time3}
+                            onChange={handleTimeChange3}
                         />
                     </div>
                 </div>
