@@ -27,8 +27,8 @@ function Accordion() {
 const data = [
   {
     question: <p className='font-bold'>PERSONAL INFORMATION</p>,
-    answer: <ul className='flex flex-wrap font-semibold'>
-            <div className="grid grid-cols-1 gap-x-12">
+    answer: <ul className='flex flex-wrap font-semibold gap-x-20'>
+            <div className="grid grid-cols-1">
         <div className="col-span-1 grid place-items-center">
                 <div className="font-bold text-center">PATIENT TYPE:
                     <div className="grid grid-flow-col auto-cols-max p-2.5">
@@ -81,7 +81,7 @@ const data = [
 		    </div>
 		  
 		          
-            <div class="col-span-3 lg:col-span-1">
+            <div class="px-10 col-span-3 lg:col-span-1">
                 <div className="font-bold">COLLEGE/DEPT.:
                     <div>
                         <input type="text" id="colldept" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
