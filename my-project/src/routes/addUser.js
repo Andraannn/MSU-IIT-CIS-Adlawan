@@ -136,7 +136,7 @@ function AddUser(){
                     1
                 </th>
                 <td class="px-6 py-4">
-                    JOHN
+                    andreigabrielle.adlawan
                 </td>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     DOCTOR
@@ -157,7 +157,7 @@ function AddUser(){
                     2
                 </th>
                 <td class="px-6 py-4">
-                    DOE
+                    cyrus.conde
                 </td>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     ADMIN
@@ -178,7 +178,7 @@ function AddUser(){
                     3
                 </th>
                 <td class="px-6 py-4">
-                    TEST
+                    phoenix.dotarot
                 </td>
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     NURSE

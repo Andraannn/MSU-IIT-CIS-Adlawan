@@ -34,19 +34,19 @@ const data = [
                     <div className="grid grid-flow-col auto-cols-max p-2.5">
                         <div>
                             <div class="flex flex-row">
-                                <input id="per_stud" type="radio" name="Patient" value="Student" class="flex items-center mr-4 w-4 h-4"/>
+                                <input id="per_stud" type="radio" name="Patient" value="Student" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
                                 <label for="per_stud" class="block mr-4 text-sm font-medium text-black"> Student</label>
                             </div>
                         </div>
                         <div>
                             <div class="flex flex-row">
-                                <input id="per_pat" type="radio" name="Patient" value="Faculty" class="flex items-center mr-4 w-4 h-4"/>
+                                <input id="per_pat" type="radio" name="Patient" value="Faculty" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
                                 <label for="per_pat" class="block mr-4 text-sm font-medium text-black"> Faculty</label>
                             </div>
                         </div>
                         <div>
                             <div class="flex flex-row">
-                                <input id="per_staff" type="radio" name="Patient" value="Staff" class="flex items-center mr-4 w-4 h-4"/>
+                                <input id="per_staff" type="radio" name="Patient" value="Staff" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
                                 <label for="per_staff" class="block mr-4 text-sm font-medium text-black"> Staff</label>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const data = [
 
 			    <div className="font-bold text-center">ID NUMBER:
                     <div className="col-span-3 lg:col-span-1">
-                        <input type="number" id="id_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2" required/>
+                        <input type="number" id="id_num" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2" value="2019-3172" readOnly/>
                     </div>  
                 </div>
             </div>
@@ -68,7 +68,7 @@ const data = [
 		        <div className="font-bold">PHOTO:
                     <div className="col-span-3 lg:col-span-1">
                         <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYVEvttsDPxq1WlChcFuWSsIfkb6wEa8ttg&usqp=CAU"
+                        src="https://static.vecteezy.com/system/resources/previews/002/534/006/original/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg"
                         class="h-44 max-w-md mx-auto rounded border p-0 dark:border-neutral-700 dark:bg-neutral-800"
                         alt="..." />                 
                     </div>
@@ -76,30 +76,30 @@ const data = [
           
 			    <div className="font-bold">FULL NAME:</div>
                     <div>
-                        <input type="text" id="full_name" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="full_name" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
                     </div>
 		    </div>
 		  
 		          
-            <div class="px-10 col-span-3 lg:col-span-1">
+            <div class="col-span-3 lg:col-span-1">
                 <div className="font-bold">COLLEGE/DEPT.:
                     <div>
-                        <input type="text" id="colldept" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="colldept" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-80 p-2.5" readOnly/>
                     </div>
                 </div> 
                 <div className="font-bold">DATE OF BIRTH:
                     <div>
-                        <input type="text" id="bdate" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="bdate" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-80 p-2.5" readOnly/>
                     </div>
                 </div>
                 <div className="font-bold">AGE:
                     <div>
-                        <input type="text" id="age" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="age" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-80 p-2.5" readOnly/>
                     </div>
                 </div>
                 <div className="font-bold">SEX:
                     <div>
-                        <input type="text" id="sex" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="sex" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-80 p-2.5" readOnly/>
                     </div>
                 </div>
             </div>
@@ -107,22 +107,22 @@ const data = [
             <div class="col-span-3 lg:col-span-1">
                 <div className="font-bold">CIVIL STATUS:
                     <div>
-                        <input type="text" id="civil" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="civil" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
                     </div>
                 </div> 
                 <div className="font-bold">HOME ADDRESS:
                     <div>
-                        <input type="text" id="h_add" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="h_add" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
                     </div>
                 </div>
                 <div className="font-bold">PRESENT ADDRESS:
                     <div>
-                        <input type="text" id="pres_add" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="pres_add" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
                     </div>
                 </div>
                 <div className="font-bold">MOBILE NUMBER:
                     <div>
-                        <input type="text" id="mob_num" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" required/>
+                        <input type="text" id="mob_num" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
                     </div>
                 </div>
 		    </div>
@@ -144,9 +144,9 @@ const data = [
                     </div>
                     <div className="col-span-2">
                         <span className="font-bold mr-2">:</span> 
-                        <input type="radio" className="inline-flex" id="allergies_y" name="allergies" value="Yes"/>
+                        <input type="radio" className="inline-flex cursor-not-allowed" id="allergies_y" name="allergies" value="Yes" disabled/>
                         <label className="mr-5" htmlFor="allergies_y">YES</label>
-                        <input type="radio" className="inline-flex" id="allergies_n" name="allergies" value="No" defaultChecked/>
+                        <input type="radio" className="inline-flex cursor-not-allowed" id="allergies_n" name="allergies" value="No" disabled/>
                         <label className="mr-2" htmlFor="allergies_n">NO</label>
                     </div>
                 </div>
@@ -159,9 +159,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="gall_y" name="gallbladder" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="gall_y" name="gallbladder" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="gall_y">YES</label>
-                    <input type="radio" className="inline-flex" id="gall_n" name="gallbladder" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="gall_n" name="gallbladder" value="No" disabled/>
                     <label className="mr-2" htmlFor="gall_n">NO</label>
                 </div>
             </div>
@@ -174,9 +174,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="pros_y" name="prostate" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="pros_y" name="prostate" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="pros_y">YES</label>
-                    <input type="radio" className="inline-flex" id="pros_n" name="prostate" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="pros_n" name="prostate" value="No" disabled/>
                     <label className="mr-2" htmlFor="pros_n">NO</label>
                 </div>
                 
@@ -190,9 +190,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="amoeb_y" name="amoebiasis" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="amoeb_y" name="amoebiasis" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="amoeb_y">YES</label>
-                    <input type="radio" className="inline-flex" id="amoeb_n" name="amoebiasis" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="amoeb_n" name="amoebiasis" value="No" disabled/>
                     <label className="mr-2" htmlFor="amoeb_n">NO</label>
                 </div>
             </div>
@@ -205,9 +205,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="goiter_y" name="goiter" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="goiter_y" name="goiter" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="goiter_y">YES</label>
-                    <input type="radio" className="inline-flex" id="goiter_n" name="goiter" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="goiter_n" name="goiter" value="No" disabled/>
                     <label className="mr-2" htmlFor="goiter_n">NO</label>
                 </div>
             </div>
@@ -220,9 +220,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="seiz_y" name="seizure" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="seiz_y" name="seizure" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="seiz_y">YES</label>
-                    <input type="radio" className="inline-flex" id="seiz_n" name="seizure" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="seiz_n" name="seizure" value="No" disabled/>
                     <label className="mr-2" htmlFor="seiz_n">NO</label>
                 </div>
             </div>
@@ -235,9 +235,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="anemia_y" name="anemia" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="anemia_y" name="anemia" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="anemia_y">YES</label>
-                    <input type="radio" className="inline-flex" id="anemia_n" name="anemia" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="anemia_n" name="anemia" value="No" disabled/>
                     <label className="mr-2" htmlFor="anemia_n">NO</label>
                 </div>
             </div>
@@ -250,9 +250,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="gout_y" name="gout" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="gout_y" name="gout" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="gout_y">YES</label>
-                    <input type="radio" className="inline-flex" id="gout_n" name="gout" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="gout_n" name="gout" value="No" disabled/>
                     <label className="mr-2" htmlFor="gout_n">NO</label>
                 </div>
             </div>
@@ -265,9 +265,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="sinus_y" name="sinusitis_allergic" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="sinus_y" name="sinusitis_allergic" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="sinus_y">YES</label>
-                    <input type="radio" className="inline-flex" id="sinus_n" name="sinusitis_allergic" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="sinus_n" name="sinusitis_allergic" value="No" disabled/>
                     <label className="mr-2" htmlFor="sinus_n">NO</label>
                 </div>
             </div>
@@ -280,9 +280,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="arth_y" name="arthritis" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="arth_y" name="arthritis" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="arth_y">YES</label>
-                    <input type="radio" className="inline-flex" id="arth_n" name="arthritis" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="arth_n" name="arthritis" value="No" disabled/>
                     <label className="mr-2" htmlFor="arth_n">NO</label>
                 </div>
             </div>
@@ -295,9 +295,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="hemor_y" name="hemorroids" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hemor_y" name="hemorroids" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="hemor_y">YES</label>
-                    <input type="radio" className="inline-flex" id="hemor_n" name="hemorroids" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hemor_n" name="hemorroids" value="No" disabled/>
                     <label className="mr-2" htmlFor="hemor_n">NO</label>
                 </div>
             </div>
@@ -310,9 +310,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="skin_y" name="skin_disorders" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="skin_y" name="skin_disorders" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="skin_y">YES</label>
-                    <input type="radio" className="inline-flex" id="skin_n" name="skin_disorders" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="skin_n" name="skin_disorders" value="No" disabled/>
                     <label className="mr-2" htmlFor="skin_n">NO</label>
                 </div>
             </div>
@@ -325,9 +325,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="back_y" name="back_joint_pains" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="back_y" name="back_joint_pains" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="back_y">YES</label>
-                    <input type="radio" className="inline-flex" id="back_n" name="back_joint_pains" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="back_n" name="back_joint_pains" value="No" disabled/>
                     <label className="mr-2" htmlFor="back_n">NO</label>
                 </div>
             </div>
@@ -340,9 +340,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="hepa_y" name="hepatitis" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hepa_y" name="hepatitis" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="hepa_y">YES</label>
-                    <input type="radio" className="inline-flex" id="hepa_n" name="hepatitis" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hepa_n" name="hepatitis" value="No" disabled/>
                     <label className="mr-2" htmlFor="hepa_n">NO</label>
                 </div>
             </div>
@@ -355,9 +355,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="sti_y" name="sti_hiv" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="sti_y" name="sti_hiv" value="Yes"disabled/>
                     <label className="mr-5" htmlFor="sti_y">YES</label>
-                    <input type="radio" className="inline-flex" id="sti_n" name="sti_hiv" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="sti_n" name="sti_hiv" value="No" disabled/>
                     <label className="mr-2" htmlFor="sti_n">NO</label>
                 </div>
             </div>
@@ -370,9 +370,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="bone_y" name="bone_fracture" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="bone_y" name="bone_fracture" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="bone_y">YES</label>
-                    <input type="radio" className="inline-flex" id="bone_n" name="bone_fracture" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="bone_n" name="bone_fracture" value="No" disabled/>
                     <label className="mr-2" htmlFor="bone_n">NO</label>
                 </div>
             </div>
@@ -385,9 +385,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="hypera_y" name="hyperacidity_ulcer" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hypera_y" name="hyperacidity_ulcer" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="hypera_y">YES</label>
-                    <input type="radio" className="inline-flex" id="hypera_n" name="hyperacidity_ulcer" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hypera_n" name="hyperacidity_ulcer" value="No" disabled/>
                     <label className="mr-2" htmlFor="hypera_n">NO</label>
                 </div>
             </div>
@@ -400,9 +400,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="stroke_y" name="stroke" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="stroke_y" name="stroke" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="stroke_y">YES</label>
-                    <input type="radio" className="inline-flex" id="stroke_n" name="stroke" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="stroke_n" name="stroke" value="No" disabled/>
                     <label className="mr-2" htmlFor="stroke_n">NO</label>
                 </div>
             </div>
@@ -415,9 +415,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="breast_y" name="breastmass_lump" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="breast_y" name="breastmass_lump" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="breast_y">YES</label>
-                    <input type="radio" className="inline-flex" id="breast_n" name="breastmass_lump" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="breast_n" name="breastmass_lump" value="No" disabled/>
                     <label className="mr-2" htmlFor="breast_n">NO</label>
                 </div>
             </div>
@@ -430,9 +430,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="hypert_y" name="hypertension" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hypert_y" name="hypertension" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="hypert_y">YES</label>
-                    <input type="radio" className="inline-flex" id="hypert_n" name="hypertension" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="hypert_n" name="hypertension" value="No" disabled/>
                     <label className="mr-2" htmlFor="hypert_n">NO</label>
                 </div>
             </div>
@@ -445,9 +445,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="surgery_y" name="surgery_injury" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="surgery_y" name="surgery_injury" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="surgery_y">YES</label>
-                    <input type="radio" className="inline-flex" id="surgery_n" name="surgery_injury" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="surgery_n" name="surgery_injury" value="No" disabled/>
                     <label className="mr-2" htmlFor="surgery_n">NO</label>
                 </div>
             </div>
@@ -460,9 +460,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="chest_y" name="chest_pains" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="chest_y" name="chest_pains" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="chest_y">YES</label>
-                    <input type="radio" className="inline-flex" id="chest_n" name="chest_pains" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="chest_n" name="chest_pains" value="No" disabled/>
                     <label className="mr-2" htmlFor="chest_n">NO</label>
                 </div>
             </div>
@@ -475,9 +475,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="kidney_y" name="kidney_bladder" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="kidney_y" name="kidney_bladder" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="kidney_y">YES</label>
-                    <input type="radio" className="inline-flex" id="kidney_n" name="kidney_bladder" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="kidney_n" name="kidney_bladder" value="No" disabled/>
                     <label className="mr-2" htmlFor="kidney_n">NO</label>
                 </div>
             </div>
@@ -490,9 +490,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="thyroid_y" name="thyroid_problems" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="thyroid_y" name="thyroid_problems" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="thyroid_y">YES</label>
-                    <input type="radio" className="inline-flex" id="thyroid_n" name="thyroid_problems" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="thyroid_n" name="thyroid_problems" value="No" disabled/>
                     <label className="mr-2" htmlFor="thyroid_n">NO</label>
                 </div>
             </div>
@@ -505,9 +505,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="chipox_y" name="chicken_pox" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="chipox_y" name="chicken_pox" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="chipox_y">YES</label>
-                    <input type="radio" className="inline-flex" id="chipox_n" name="chicken_pox" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="chipox_n" name="chicken_pox" value="No" disabled/>
                     <label className="mr-2" htmlFor="chipox_n">NO</label>
                 </div>
             </div>
@@ -520,9 +520,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="loss_y" name="loss_conciousness" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="loss_y" name="loss_conciousness" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="loss_y">YES</label>
-                    <input type="radio" className="inline-flex" id="loss_n" name="loss_conciousness" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="loss_n" name="loss_conciousness" value="No" disabled/>
                     <label className="mr-2" htmlFor="loss_n">NO</label>
                 </div>
             </div>
@@ -535,9 +535,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="tonsil_y" name="tonsillitis" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="tonsil_y" name="tonsillitis" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="tonsil_y">YES</label>
-                    <input type="radio" className="inline-flex" id="tonsil_n" name="tonsillitis" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="tonsil_n" name="tonsillitis" value="No" disabled/>
                     <label className="mr-2" htmlFor="tonsil_n">NO</label>
                 </div>
             </div>
@@ -550,9 +550,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="diabm_y" name="diabetes_mellitus" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="diabm_y" name="diabetes_mellitus" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="diabm_y">YES</label>
-                    <input type="radio" className="inline-flex" id="diabm_n" name="diabetes_mellitus" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="diabm_n" name="diabetes_mellitus" value="No" disabled/>
                     <label className="mr-2" htmlFor="diabm_n">NO</label>
                 </div>
             </div>
@@ -565,9 +565,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="meas_y" name="measles" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="meas_y" name="measles" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="meas_y">YES</label>
-                    <input type="radio" className="inline-flex" id="meas_n" name="measles" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="meas_n" name="measles" value="No" disabled/>
                     <label className="mr-2" htmlFor="meas_n">NO</label>
                 </div>
             </div>
@@ -580,9 +580,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="tuber_y" name="tuberculosis" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="tuber_y" name="tuberculosis" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="tuber_y">YES</label>
-                    <input type="radio" className="inline-flex" id="tuber_n" name="tuberculosis" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="tuber_n" name="tuberculosis" value="No" disabled/>
                     <label className="mr-2" htmlFor="tuber_n">NO</label>
                 </div>
             </div>
@@ -595,9 +595,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="epil_y" name="epilepsy" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="epil_y" name="epilepsy" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="epil_y">YES</label>
-                    <input type="radio" className="inline-flex" id="epil_n" name="epilepsy" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="epil_n" name="epilepsy" value="No" disabled/>
                     <label className="mr-2" htmlFor="epil_n">NO</label>
                 </div>
             </div>
@@ -610,9 +610,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="mumps_y" name="mumps" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="mumps_y" name="mumps" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="mumps_y">YES</label>
-                    <input type="radio" className="inline-flex" id="mumps_n" name="mumps" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="mumps_n" name="mumps" value="No" disabled/>
                     <label className="mr-2" htmlFor="mumps_n">NO</label>
                 </div>
             </div>
@@ -625,9 +625,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="uti_y" name="uti" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="uti_y" name="uti" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="uti_y">YES</label>
-                    <input type="radio" className="inline-flex" id="uti_n" name="uti" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="uti_n" name="uti" value="No" disabled/>
                     <label className="mr-2" htmlFor="uti_n">NO</label>
                 </div>
             </div>
@@ -640,9 +640,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="eye_y" name="eye_or_ear" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="eye_y" name="eye_or_ear" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="eye_y">YES</label>
-                    <input type="radio" className="inline-flex" id="eye_n" name="eye_or_ear" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="eye_n" name="eye_or_ear" value="No" disabled/>
                     <label className="mr-2" htmlFor="eye_n">NO</label>
                 </div>
             </div>
@@ -655,9 +655,9 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="radio" className="inline-flex" id="pneum_y" name="pneumonia" value="Yes"/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="pneum_y" name="pneumonia" value="Yes" disabled/>
                     <label className="mr-5" htmlFor="pneum_y">YES</label>
-                    <input type="radio" className="inline-flex" id="pneum_n" name="pneumonia" value="No" defaultChecked/>
+                    <input type="radio" className="inline-flex cursor-not-allowed" id="pneum_n" name="pneumonia" value="No" disabled/>
                     <label className="mr-2" htmlFor="pneum_n">NO</label>
                 </div>
             </div>
@@ -670,7 +670,7 @@ const data = [
                 </div>
                 <div className="col-span-2">
                     <span className="font-bold mr-2">:</span> 
-                    <input type="text" className="inline-flex border border-black py-1 px-2" />
+                    <input type="text" className="cursor-not-allowed inline-flex border border-black py-1 px-2" readOnly/>
                 </div>
                 
             </div>
@@ -693,9 +693,9 @@ const data = [
                             </div>
                             <div className="col-span-2">
                                 <span className="font-bold mr-2">:</span> 
-                                <input type="radio" className="inline-flex" id="HBP_y" name="fam_high_blood_pressure" value="Yes"/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="HBP_y" name="fam_high_blood_pressure" value="Yes" disabled/>
                                 <label className="mr-5" htmlFor="HBP_y">YES</label>
-                                <input type="radio" className="inline-flex" id="HBP_n" name="fam_high_blood_pressure" value="No" defaultChecked/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="HBP_n" name="fam_high_blood_pressure" value="No" disabled cursor-not-allowed/>
                                 <label className="mr-2" htmlFor="HBP_n">NO</label>
                             </div>
                         </div>
@@ -708,9 +708,9 @@ const data = [
                             </div>
                             <div className="col-span-2">
                                 <span className="font-bold mr-2">:</span> 
-                                <input type="radio" className="inline-flex" id="tuberc_y" name="fam_tuberculosis" value="Yes"/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="tuberc_y" name="fam_tuberculosis" value="Yes" disabled/>
                                 <label className="mr-5" htmlFor="tuberc_y">YES</label>
-                                <input type="radio" className="inline-flex" id="tuberc_n" name="fam_tuberculosis" value="No" defaultChecked/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="tuberc_n" name="fam_tuberculosis" value="No" disabled/>
                                 <label className="mr-2" htmlFor="tuberc_n">NO</label>
                             </div>
                         </div>
@@ -723,9 +723,9 @@ const data = [
                             </div>
                             <div className="col-span-2">
                                 <span className="font-bold mr-2">:</span> 
-                                <input type="radio" className="inline-flex" id="HD_y" name="fam_heart_disease" value="Yes"/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="HD_y" name="fam_heart_disease" value="Yes" disabled/>
                                 <label className="mr-5" htmlFor="HD_y">YES</label>
-                                <input type="radio" className="inline-flex" id="HD_n" name="fam_heart_disease" value="No" defaultChecked/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="HD_n" name="fam_heart_disease" value="No" disabled/>
                                 <label className="mr-2" htmlFor="HD_n">NO</label>
                             </div>
                         </div>
@@ -738,9 +738,9 @@ const data = [
                             </div>
                             <div className="col-span-2">
                                 <span className="font-bold mr-2">:</span> 
-                                <input type="radio" className="inline-flex" id="HD_y" name="fam_asthma" value="Yes"/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="HD_y" name="fam_asthma" value="Yes" disabled/>
                                 <label className="mr-5" htmlFor="HD_y">YES</label>
-                                <input type="radio" className="inline-flex" id="HD_n" name="fam_asthma" value="No" defaultChecked/>
+                                <input type="radio" className="inline-flex cursor-not-allowed" id="HD_n" name="fam_asthma" value="No"  disabled/>
                                 <label className="mr-2" htmlFor="HD_n">NO</label>
                             </div>
                         </div>
@@ -753,9 +753,9 @@ const data = [
                         </div>
                         <div className="col-span-2">
                             <span className="font-bold mr-2">:</span> 
-                            <input type="radio" className="inline-flex" id="diab_y" name="fam_diabetes" value="Yes"/>
+                            <input type="radio" className="inline-flex cursor-not-allowed" id="diab_y" name="fam_diabetes" value="Yes" disabled/>
                             <label className="mr-5" htmlFor="diab_y">YES</label>
-                            <input type="radio" className="inline-flex" id="diab_n" name="fam_diabetes" value="No" defaultChecked/>
+                            <input type="radio" className="inline-flex cursor-not-allowed" id="diab_n" name="fam_diabetes" value="No" disabled/>
                             <label className="mr-2" htmlFor="diab_n">NO</label>
                         </div>
                     </div>
@@ -768,9 +768,9 @@ const data = [
                         </div>
                         <div className="col-span-2">
                             <span className="font-bold mr-2">:</span> 
-                            <input type="radio" className="inline-flex" id="falgry_y" name="fam_allergies" value="Yes"/>
+                            <input type="radio" className="inline-flex cursor-not-allowed" id="falgry_y" name="fam_allergies" value="Yes" disabled/>
                             <label className="mr-5" htmlFor="falgry_y">YES</label>
-                            <input type="radio" className="inline-flex" id="falgry_n" name="fam_allergies" value="No" defaultChecked/>
+                            <input type="radio" className="inline-flex cursor-not-allowed" id="falgry_n" name="fam_allergies" value="No" disabled/>
                             <label className="mr-2" htmlFor="falgry_n">NO</label>
                         </div>
                     </div>
@@ -783,9 +783,9 @@ const data = [
                         </div>
                         <div className="col-span-2">
                             <span className="font-bold mr-2">:</span> 
-                            <input type="radio" className="inline-flex" id="famcan_y" name="fam_cancer" value="Yes"/>
+                            <input type="radio" className="inline-flex cursor-not-allowed" id="famcan_y" name="fam_cancer" value="Yes" disabled/>
                             <label className="mr-5" htmlFor="famcan_y">YES</label>
-                            <input type="radio" className="inline-flex" id="famcan_n" name="fam_cancer" value="No" defaultChecked/>
+                            <input type="radio" className="inline-flex cursor-not-allowed" id="famcan_n" name="fam_cancer" value="No" disabled/>
                             <label className="mr-2" htmlFor="famcan_y">NO</label>
                         </div>
                     </div>
@@ -798,7 +798,7 @@ const data = [
                         </div>
                         <div className="col-span-2">
                             <span className="font-bold mr-2">:</span> 
-                            <input type="text" className="inline-flex border border-black py-1 px-2" />
+                            <input type="text" className="cursor-not-allowed inline-flex border border-black py-1 px-2" readOnly/>
                         </div>   
                     </div>
                     {/*end item*/}
@@ -817,16 +817,16 @@ const data = [
                     <p className="font-bold mr-2">Do you smoke?</p> 
                 </div>
                 <div>
-                    <input type="radio" id="smoke_y" name="smoke" value="Yes"/>
-                    <label className="mr-2 font-semibold" htmlFor="smoke_y">YES</label>
-                    <input type="radio" id="smoke_n" name="smoke" value="No" defaultChecked/>
-                    <label className="mr-2 font-semibold" htmlFor="smoke_n">NO</label>
+                    <input type="radio" id="smoke_y" name="smoke" value="Yes" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="smoke_y">YES</label>
+                    <input type="radio" id="smoke_n" name="smoke" value="No" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="smoke_n">NO</label>
                 </div>
             </div>
             {/* end smoke */}
             <div className="">
                 <p className="font-bold mr-2">if yes, how many packs?: (indicate if per days/months)</p>
-                <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  "/>
+                <input type="text" id="packs" class="cursor-not-allowed border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
             </div>
             {/* drink */}
             <div className="flex flex-col md:flex-row py-5">
@@ -834,10 +834,10 @@ const data = [
                     <p className="font-bold mr-2">Do you drink?</p> 
                 </div>
                 <div>
-                    <input type="radio" id="drink_y" name="drink" value="Yes"/>
-                    <label className="mr-2 font-semibold" htmlFor="drink_y">YES</label>
-                    <input type="radio" id="drink_n" name="drink" value="No" defaultChecked/>
-                    <label className="mr-2 font-semibold" htmlFor="drink_n">NO</label>
+                    <input type="radio" id="drink_y" name="drink" value="Yes" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="drink_y">YES</label>
+                    <input type="radio" id="drink_n" name="drink" value="No" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="drink_n">NO</label>
                 </div>
             </div>
             {/* end drink */}
@@ -848,10 +848,10 @@ const data = [
                     <p className="font-bold mr-2 font-bold">If yes, how frequent?</p>
                 </div> 
                 <div>
-                    <input type="radio" id="occasional" name="frequency" value="Normal"/>
-                    <label className="mr-2 font-semibold" htmlFor="occasional">OCCASIONAL</label>
-                    <input type="radio" id="seldom" name="frequency" value="Abnormal"/>
-                    <label className="mr-2 font-semibold" htmlFor="seldom">SELDOM</label>
+                    <input type="radio" id="occasional" name="frequency" value="Normal" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="occasional">OCCASIONAL</label>
+                    <input type="radio" id="seldom" name="frequency" value="Abnormal" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="seldom">SELDOM</label>
                 </div>
             {/* end of frequency */}
             </div>
@@ -861,16 +861,16 @@ const data = [
                     <p className="font-bold mr-2">Do you take medications at present?</p> 
                 </div>
                 <div>
-                    <input type="radio" id="meds_y" name="meds" value="Yes"/>
-                    <label className="mr-2 font-semibold" htmlFor="meds_y">YES</label>
-                    <input type="radio" id="med_n" name="meds" value="No" defaultChecked/>
-                    <label className="mr-2 font-semibold" htmlFor="med_n">NO</label>
+                    <input type="radio" id="meds_y" name="meds" value="Yes" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="meds_y">YES</label>
+                    <input type="radio" id="med_n" name="meds" value="No" disabled/>
+                    <label className="mr-2 font-semibold cursor-not-allowed" htmlFor="med_n">NO</label>
                 </div>
             </div>
             {/* end of medication */}
             <div className="">
                 <p className="font-bold mr-2">if yes, please indicate:</p>
-                <input type="text" id="packs" class="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5  "/>
+                <input type="text" id="packs" class="cursor-not-allowed border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
             </div>
         </div>
         {/*end item*/}

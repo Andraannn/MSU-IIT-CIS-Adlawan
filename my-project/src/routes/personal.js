@@ -41,7 +41,7 @@ function PersonalInformation(){
 		        <div className="font-bold">PHOTO:
                     <div className="col-span-3 lg:col-span-1">
                         <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYVEvttsDPxq1WlChcFuWSsIfkb6wEa8ttg&usqp=CAU"
+                        src="https://static.vecteezy.com/system/resources/previews/002/534/006/original/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg"
                         class="h-44 max-w-md mx-auto rounded border p-0 dark:border-neutral-700 dark:bg-neutral-800"
                         alt="..." />                 
                     </div>
