@@ -11,6 +11,7 @@ import FamilyHistory from './routes/familyhistory';
 import Vitals from './routes/vitals';
 import Social from './routes/social';
 import PersonalInformation from './routes/personal';
+import NewAccordion from './routes/new';
 
 function App() {
   
@@ -27,6 +28,7 @@ function App() {
       <Route path="/vitals" element={<Vitals></Vitals>}></Route>
       <Route path="/socialhistory" element={<Social></Social>}></Route>
       <Route path="/personalinfo" element={<PersonalInformation></PersonalInformation>}></Route>
+      <Route path="/newaccordion" element={<NewAccordion></NewAccordion>}></Route>
 
     </Routes>
   </div>

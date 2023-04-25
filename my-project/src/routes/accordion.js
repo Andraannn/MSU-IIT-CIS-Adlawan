@@ -1,8 +1,7 @@
-import { useState } from 'react'
+import { React, useState } from 'react'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 
 function Accordion() {
-    
   const [selected, setSelected] = useState(null)
   const toggle = (i) => {
     if (selected === i){
@@ -29,33 +28,33 @@ const data = [
     question: <p className='font-bold'>PERSONAL INFORMATION</p>,
     answer: <ul className='flex flex-wrap font-semibold gap-x-20'>
             <div className="grid grid-cols-1">
-        <div className="col-span-1 grid place-items-center">
-                <div className="font-bold text-center">PATIENT TYPE:
-                    <div className="grid grid-flow-col auto-cols-max p-2.5">
-                        <div>
-                            <div class="flex flex-row">
-                                <input id="per_stud" type="radio" name="Patient" value="Student" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
-                                <label for="per_stud" class="block mr-4 text-sm font-medium text-black"> Student</label>
+                <div className="col-span-1 grid place-items-center">
+                    <div className="font-bold text-center">PATIENT TYPE:
+                        <div className="grid grid-flow-col auto-cols-max p-2.5">
+                            <div>
+                                <div class="flex flex-row">
+                                    <input id="per_stud" type="radio" name="Patient" value="Student" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
+                                    <label for="per_stud" class="block mr-4 text-sm font-medium text-black"> Student</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex flex-row">
+                                    <input id="per_pat" type="radio" name="Patient" value="Faculty" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
+                                    <label for="per_pat" class="block mr-4 text-sm font-medium text-black"> Faculty</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex flex-row">
+                                    <input id="per_staff" type="radio" name="Patient" value="Staff" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
+                                    <label for="per_staff" class="block mr-4 text-sm font-medium text-black"> Staff</label>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="flex flex-row">
-                                <input id="per_pat" type="radio" name="Patient" value="Faculty" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
-                                <label for="per_pat" class="block mr-4 text-sm font-medium text-black"> Faculty</label>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex flex-row">
-                                <input id="per_staff" type="radio" name="Patient" value="Staff" class="cursor-not-allowed flex items-center mr-4 w-4 h-4" disabled/>
-                                <label for="per_staff" class="block mr-4 text-sm font-medium text-black"> Staff</label>
-                            </div>
-                        </div>
-                    </div>
                 </div> 
 
 			    <div className="font-bold text-center">ID NUMBER:
                     <div className="col-span-3 lg:col-span-1">
-                        <input type="number" id="id_num" class="cursor-not-allowed border border-black text-gray-900 text-sm rounded-lg block w-full p-2" value="2019-3172" readOnly/>
+                        <input type="number" id="id_num" class="cursor-not-allowed border border-black text-black text-sm rounded-lg block w-full p-2" value="2019-3172" readOnly/>
                     </div>  
                 </div>
             </div>
@@ -130,12 +129,23 @@ const data = [
     </ul>,
   },
 
-
-
-  
   {
-    question: <p className='font-bold '>PAST MEDICAL HISTORY</p>,
-    answer: <ul className=' flex flex-wrap font-semibold'>
+    question: <p className='font-bold'>MEDICAL RECORD</p>,
+    answer: <ul className='font-semibold'>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">PAST MEDICAL HISTORY</button>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">FAMILY HISTORY</button>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">SOCIAL HISTORY</button>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">VITAL SIGNS AND OTHERS</button>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">PHYSICAL EXAMINATION</button>
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">ASSESSMENT AND RECOMMENDATIONS</button>
+                </div>
+            </ul>,
+  },
+
+  {
+    question: <p className='font-bold'>PAST MEDICAL HISTORY</p>,
+    answer: <ul className='flex flex-wrap font-semibold'>
             <div className="grid grid-cols-2">
             {/* item */}
                 <div className="col-span-2 lg:col-span-1 grid grid-cols-3 mt-4">
