@@ -130,20 +130,6 @@ const data = [
   },
 
   {
-    question: <p className='font-bold'>MEDICAL RECORD</p>,
-    answer: <ul className='font-semibold'>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">PAST MEDICAL HISTORY</button>
-                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">FAMILY HISTORY</button>
-                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">SOCIAL HISTORY</button>
-                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">VITAL SIGNS AND OTHERS</button>
-                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">PHYSICAL EXAMINATION</button>
-                    <button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded">ASSESSMENT AND RECOMMENDATIONS</button>
-                </div>
-            </ul>,
-  },
-
-  {
     question: <p className='font-bold'>PAST MEDICAL HISTORY</p>,
     answer: <ul className='flex flex-wrap font-semibold'>
             <div className="grid grid-cols-2">
