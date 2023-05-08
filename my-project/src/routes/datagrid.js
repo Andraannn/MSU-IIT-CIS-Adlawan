@@ -35,6 +35,7 @@ const data = [
   { id: '2019-0032', name: 'Emily Taylor', type: 'Student', number: '091234567890' },
   { id: '2019-0033', name: 'Emily Taylor', type: 'Student', number: '091234567890' },
   { id: '2019-0034', name: 'Kevin Wilson', type: 'Student', number: '091234567890' },
+
 ];
 
 const DataGrid = () => {
@@ -124,9 +125,9 @@ const DataGrid = () => {
          </button>
 
       </div>
-      <div className="flex justify-between mt-4">
+      <div className="flex float-left mt-4">
         <p className="text-sm text-gray-700">
-          Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {data.length} entries
+          {currentPage} of {totalPages} pages ({data.length} entries)
         </p>
       </div>
     </div>
