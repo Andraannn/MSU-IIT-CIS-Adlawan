@@ -67,8 +67,8 @@ const DataGrid = () => {
   }
   return (
     <div className="w-full px-4 py-8">
-      <table className="table-auto w-full">
-        <thead className='bg-gray-200'>
+      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
           <tr>
             <th className="px-4 py-2">ID NUMBER</th>
             <th className="px-4 py-2">FULL NAME</th>
@@ -79,12 +79,12 @@ const DataGrid = () => {
         </thead>
         <tbody>
           {currentRows.map(row => (
-            <tr key={row.id}>
-              <td className="border px-4 py-2">{row.id}</td>
-              <td className="border px-4 py-2">{row.name}</td>
-              <td className="border px-4 py-2">{row.type}</td>
-              <td className="border px-4 py-2">{row.number}</td>
-              <td className="border px-4 py-2">{row.action}</td>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" key={row.id}>
+              <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{row.id}</td>
+              <td className="px-6 py-4">{row.name}</td>
+              <td className="px-6 py-4">{row.type}</td>
+              <td className="px-6 py-4">{row.number}</td>
+              <td className="px-6 py-4">{row.action}</td>
             </tr>
           ))}
         </tbody>

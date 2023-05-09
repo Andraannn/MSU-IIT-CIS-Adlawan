@@ -13,6 +13,8 @@ import Social from './routes/social';
 import PersonalInformation from './routes/personal';
 import NewAccordion from './routes/new';
 import DataGrid from './routes/datagrid';
+import Dashboard from './routes/dashboard';
+import TestingCode from './routes/testing';
 
 function App() {
   
@@ -31,6 +33,8 @@ function App() {
       <Route path="/personalinfo" element={<PersonalInformation></PersonalInformation>}></Route>
       <Route path="/newaccordion" element={<NewAccordion></NewAccordion>}></Route>
       <Route path="/datagrid" element={<DataGrid></DataGrid>}></Route>
+      <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+      <Route path="/testingcode" element={<TestingCode></TestingCode>}></Route>
 
     </Routes>
   </div>
