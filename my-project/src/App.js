@@ -15,6 +15,9 @@ import NewAccordion from './routes/new';
 import DataGrid from './routes/datagrid';
 import Dashboard from './routes/dashboard';
 import TestingCode from './routes/testing';
+import StudentPatients from './routes/widget';
+import FacultyStaff from './routes/widget2';
+import TotalAppointments from './routes/widget3';
 
 function App() {
   
@@ -35,6 +38,10 @@ function App() {
       <Route path="/datagrid" element={<DataGrid></DataGrid>}></Route>
       <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
       <Route path="/testingcode" element={<TestingCode></TestingCode>}></Route>
+      <Route element={<StudentPatients></StudentPatients>}></Route>
+      <Route element={<FacultyStaff></FacultyStaff>}></Route>
+      <Route element={<TotalAppointments></TotalAppointments>}></Route>
+
 
     </Routes>
   </div>
