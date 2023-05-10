@@ -15,9 +15,9 @@ import NewAccordion from './routes/new';
 import DataGrid from './routes/datagrid';
 import Dashboard from './routes/dashboard';
 import TestingCode from './routes/testing';
-import StudentPatients from './routes/widget';
-import FacultyStaff from './routes/widget2';
-import TotalAppointments from './routes/widget3';
+import StudentPatients from './routes/student_widget';
+import FacultyStaff from './routes/facultystaff_widget';
+import TotalAppointments from './routes/totalappoint_widget';
 
 function App() {
   

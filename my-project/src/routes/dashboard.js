@@ -1,12 +1,12 @@
 import React from "react";
-import StudentPatients from "./widget";
-import FacultyStaff from "./widget2";
-import TotalAppointments from "./widget3";
+import StudentPatients from "./student_widget";
+import FacultyStaff from "./facultystaff_widget";
+import TotalAppointments from "./totalappoint_widget";
 
 function Dashboard(){
     return(
         <>
-        <main class="bg-slate-600 bg-cover flex flex-col w-full bg-white overflow-x-hidden overflow-y-auto mb-14">
+        <main class="bg-slate-600 bg-cover flex flex-col w-full overflow-x-hidden overflow-y-auto mb-14">
         <div class="flex w-full mx-auto px-6 py-8">
             <div class="flex flex-col w-full h-full text-gray-900 text-xl">
                 <div className="w-full">

@@ -39,6 +39,25 @@ const data = [
 ];
 
 const DataGrid = () => {
+  const [testdata, setdata] = useState(data);
+  const [order, setOrder] = useState("ASC")
+  const sorting =(col) =>{
+    if (order === "ASC"){
+      const sorted = [...testdata].sort((a,b)=>
+        a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+      );
+      setdata(sorted);
+      setOrder("DSC");
+    }
+    if (order === "DSC"){
+      const sorted = [...testdata].sort((a,b)=>
+        a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
+      );
+      setdata(sorted);
+      setOrder("ASC");
+    }
+  };
+   
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage] = useState(5);
 
@@ -70,10 +89,10 @@ const DataGrid = () => {
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
           <tr>
-            <th className="px-4 py-2">ID NUMBER</th>
-            <th className="px-4 py-2">FULL NAME</th>
-            <th className="px-4 py-2">PATIENT TYPE</th>
-            <th className="px-4 py-2">CONTACT NUMBER</th>
+            <th onClick={()=>sorting("id")} className="px-4 py-2">ID NUMBER</th>
+            <th onClick={()=>sorting("name")} className="px-4 py-2">FULL NAME</th>
+            <th onClick={()=>sorting("type")} className="px-4 py-2">PATIENT TYPE</th>
+            <th onClick={()=>sorting("number")} className="px-4 py-2">CONTACT NUMBER</th>
             <th className="px-4 py-2">ACTION</th>
           </tr>
         </thead>

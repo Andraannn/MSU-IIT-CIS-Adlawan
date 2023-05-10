@@ -1496,7 +1496,7 @@ const renderSwitch = (param) => {
                             </div>
                             <div className="col-span-2 lg:mr-20 lg:ml-20">
                                 <div className="font-bold">DIAGNOSIS:
-                                <textarea cols="30" rows="8" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter diagnosis" readOnly></textarea>
+                                <textarea cols="30" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter diagnosis" readOnly></textarea>
                                 </div>
 
                                 <div className="font-bold">FINDINGS:
@@ -1505,6 +1505,10 @@ const renderSwitch = (param) => {
 
                                 <div className="font-bold">RECOMMENDATIONS:
                                 <textarea cols="30" rows="8" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter recommendations" readOnly></textarea>
+                                </div>
+
+                                <div className="font-bold">REMARKS:
+                                <textarea cols="30" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter remarks" readOnly></textarea>
                                 </div>
                             </div>
                         </div>
@@ -1522,6 +1526,177 @@ const renderSwitch = (param) => {
                     </div>
                 </div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            </>
+        )
+        case 'view':
+            return(
+            <>
+            <div
+                className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            >
+                <div className="relative w-full my-auto mx-auto max-w-6xl">
+                    {/*content*/}
+                    <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                    {/*header*/}
+                        <div className="flex w-full items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                            <h3 className="text-3xl font-semibold">MEDICAL RECORD</h3>
+                        </div>
+                    {/*body*/}
+                    <div className='p-6 p-6 grid grid-cols-1 md:grid-cols-3 gap-4'>
+                        <div className="font-bold">MEDICAL RECORD ID:
+                            <div>
+                                <input type="text" id="medrec_id" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
+                            </div>  
+                        </div>
+                        <div className="font-bold">MEDICAL RECORD TYPE:
+                            <div className="col-span-2 lg:col-span-1">
+                                <input type="text" id="medrec_id" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
+                            </div>  
+                        </div>
+                        <div className="font-bold">DATE:
+                            <div className="col-span-2 lg:col-span-1">
+                                <input type="text" id="date" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
+                            </div>  
+                        </div>
+                    </div>
+                    <div className="p-6 grid grid-cols-2 gap-x-12">
+                            <div class="col-span-2 lg:col-span-1">  
+                                <div className="font-bold">CHIEF COMPLAINT:
+                                    <div className="col-span-2 lg:col-span-1">
+                                        <input type="text" id="ch_complaint" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
+                                    </div>  
+                                </div>
+                            <div className="font-bold">VITAL SIGNS:
+                                <div>
+                                    <label for="TEMP" class="block mb-2 text-sm font-medium font-semibold text-black">TEMPERATURE (C): </label>
+                                    <input type="number" id="TEMP" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                </div>
+                                <div> 
+                                    <label for="PULSE" class="block mb-2 text-sm font-medium font-semibold text-black">PULSE RATE (BPM)</label>
+                                    <input type="number" id="PULSE" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                </div>
+                                <div>
+                                    <label for="REST" class="block mb-2 text-sm font-medium font-semibold text-black">RESTING RATE (BPM) </label>
+                                    <input type="number" id="REST" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                </div>
+                                <div>
+                                    <label for="BLOOD" class="block mb-2 text-sm font-medium font-semibold text-black">BLOOD PRESSURE (MMHG): </label>
+                                    <input type="number" id="BLOOD" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                </div>
+                                <div>
+                                    <label for="WEIGHT" class="block mb-2 text-sm font-medium font-semibold text-black">WEIGHT (KG): </label>
+                                    <input type="number" id="WEIGHT" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                </div>
+                                </div>
+                                    <div className="font-bold">HISTORY OF PRESENT ILLNESS:
+                                        <input type="text" id="histo_ill" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" readOnly/>
+                            </div>
+                            <div className='py-5 text-sm font-medium'>BY NURSE: </div>
+                    </div>
+                        <div class="col-span-2 lg:col-span-1">
+                            <div className="font-bold">NURSING INTERVENTIONS:
+                                <div className="col-span-3 lg:col-span-1">
+                                    <div>
+                                        <div>
+                                            <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                                            <input type="text" id="MED" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                        </div>
+
+                                        <div>
+                                            <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                                            <input type="text" id="NURSE" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' readOnly/>
+                                        </div>
+
+                                        <div>
+                                            <label for="TIME" class="block mb-2 text-sm font-medium text-black">Time: </label>
+                                            <input
+                                            className="px-2 py-1 border border-black rounded-md mr-2 text-sm"
+                                            type="time"
+                                            value={time}
+                                            onChange={handleTimeChange}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                                            <input type="text" id="MED" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                        </div>
+
+                                        <div>
+                                            <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                                            <input type="text" id="NURSE" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' readOnly/>
+                                        </div>
+
+                                        <div>
+                                            <label for="TIME" class="block mb-2 text-sm font-medium text-black">Time: </label>
+                                            <input
+                                            className="px-2 py-1 border border-black rounded-md mr-2 text-sm"
+                                            type="time"
+                                            value={time2}
+                                            onChange={handleTimeChange2}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <label for="MED" class="block mb-2 text-sm font-medium text-black">Given Medicine: </label>
+                                            <input type="text" id="MED" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5  " readOnly/>
+                                        </div>
+
+                                        <div>
+                                            <label for="NURSE" class="block mb-2 text-sm font-medium text-black">Given by: </label>
+                                            <input type="text" id="NURSE" class="border border-black text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder='NAME OF REGISTERED NURSE' readOnly/>
+                                        </div>
+                                            <div>
+                                                <label for="TIME" class="block mb-2 text-sm font-medium text-black">Time: </label>
+                                                <input
+                                                className="px-2 py-1 border border-black rounded-md mr-2 text-sm"
+                                                type="time"
+                                                value={time3}
+                                                onChange={handleTimeChange3}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div className="col-span-2 lg:mr-20 lg:ml-20">
+                                <div className="font-bold">DIAGNOSIS:
+                                <textarea cols="30" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter diagnosis" readOnly></textarea>
+                                </div>
+
+                                <div className="font-bold">FINDINGS:
+                                <textarea cols="30" rows="8" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter findings" readOnly></textarea>
+                                </div>
+
+                                <div className="font-bold">RECOMMENDATIONS:
+                                <textarea cols="30" rows="8" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter recommendations" readOnly></textarea>
+                                </div>
+
+                                <div className="font-bold">REMARKS:
+                                <textarea cols="30" class="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Enter remarks" readOnly></textarea>
+                                </div>
+
+                                <div className='py-5 text-sm font-medium'>BY DOCTOR: </div>
+                            </div>
+                        </div>
+                    {/*footer*/}
+                        <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                            <button
+                                className="bg-stone-600 text-white active:bg-stone-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                type="button"
+                                onClick={() => setShowModal(false)}
+                            >
+                            CLOSE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
             </>
         )
     }
@@ -1687,8 +1862,7 @@ const data = [
                                 DOCTOR
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                                <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => setShowModal('view')}>View</a>
                             </td>
                         </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -1708,8 +1882,7 @@ const data = [
                                 ADMIN
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                                <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => setShowModal('view')}>View</a>
                             </td>
                         </tr>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -1729,8 +1902,7 @@ const data = [
                                 NURSE
                             </td>
                             <td class="px-6 py-4">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                                <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => setShowModal('view')}>View</a>
                             </td>
                         </tr>
                     </tbody>
