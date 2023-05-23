@@ -1,7 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 
 function AddUser(){
         const [showModal, setShowModal] = React.useState(false);
+
+        const [checkedValues, setValue] = useState([])
+        function handleChange(event){
+            const {value, checked} = event.target
+
+            if(checked){
+                setValue(pre => [...pre,value])
+
+            }else(
+                setValue(pre =>{
+                    return [...pre.filter(skill => skill!==value)]
+                })
+            )
+        }
+        console.log(checkedValues)
         
         const renderSwitch = (param) => {
           switch(param) {
@@ -11,7 +26,7 @@ function AddUser(){
                 <div
                     className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
                 >
-                    <div className="relative w-full my-auto mx-auto max-w-6xl">
+                    <div className="relative w-auto my-auto mx-auto max-w-6xl">
                         {/*content*/}
                         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                         {/*header*/}
@@ -42,6 +57,7 @@ function AddUser(){
                           <thead class="text-xs font-bold text-gray-800 uppercase bg-gray-400 dark:bg-gray-700 dark:text-gray-400">
                               <tr>
                                   <th scope="col" class="p-4">
+                                  <input id="menu-check" type="checkbox" value="Menu" onChange={handleChange} class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                                   </th>
                                   <th scope="col" class="px-6 py-3">
                                       NAME
@@ -52,29 +68,29 @@ function AddUser(){
                               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                   <td class="w-4 p-4">
                                       <div class="flex items-center">
-                                          <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                                          <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                                          <input id="menu-check" type="checkbox" value="Menu" onChange={handleChange} class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                          <label for="menu-check" class="sr-only">checkbox</label>
                                       </div>
                                   </td>
-                                  <td class="px-6 py-4">VIEW MEDICAL RECORDS</td>
+                                  <td class="px-6 py-4">MENU</td>
                               </tr>
                               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                   <td class="w-4 p-4">
                                       <div class="flex items-center">
-                                          <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                                          <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                                          <input id="patients-check" type="checkbox" value="Patients" onChange={handleChange} class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                          <label for="patients-check" class="sr-only">checkbox</label>
                                       </div>
                                   </td>
-                                  <td class="px-6 py-4">TEST</td>
+                                  <td class="px-6 py-4">PATIENTS</td>
                               </tr>
                               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                   <td class="w-4 p-4">
                                       <div class="flex items-center">
-                                          <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                                          <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                                          <input id="reports-check" type="checkbox" value="Reports" onChange={handleChange} class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                          <label for="reports-check" class="sr-only">checkbox</label>
                                       </div>
                                   </td>
-                                  <td class="px-6 py-4">TEST 2</td>
+                                  <td class="px-6 py-4">REPORTS</td>
                               </tr>
                           </tbody>
                       </table>
@@ -156,6 +172,84 @@ function AddUser(){
                 <option>Doctor</option>
                 <option>Nurse</option>
             </select>
+        </div>
+        <div className="my-5 h-60 overflow-y-auto">
+        <table class="w-full table-auto text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs font-bold text-gray-800 uppercase bg-gray-400 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="p-4">
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            NAME
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">MENU</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-2" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">PATIENT</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">PATIENT RECORD FORM</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">MEDICAL RECORD</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">PENDING</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">REPORTS</td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="w-4 p-4">
+                            <div class="flex items-center">
+                                <input id="checkbox-table-search-3" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+                                <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4">USERS</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
             </form>
                 </div>
@@ -247,7 +341,7 @@ function AddUser(){
                 </td>
                 <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => setShowModal('edit')}>Edit</a>
-                    <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                    <a href="#" class="px-5 font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -268,7 +362,7 @@ function AddUser(){
                 </td>
                 <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                    <a href="#" class="px-5 font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -289,7 +383,7 @@ function AddUser(){
                 </td>
                 <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <a href="#" class="px-5 font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a>
+                    <a href="#" class="px-5 font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
                 </td>
             </tr>
         </tbody>
