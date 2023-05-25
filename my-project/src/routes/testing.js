@@ -41,14 +41,24 @@ const Checkbox = ({ label, children, showExpandIcon = true, onCheckAllChange, se
                 })
             )
         }else{
-            
-            if(checked){
+            if(Array.isArray(children)){
+              if(checked){
                 children.map(child => {(!checkedValues.includes(child.props.label)) && setValue(pre => [...pre, child.props.label])})
                 
+              }else{
+                  children.map(child => {setValue(pre => { return[...pre.filter(skill=>skill!==child.props.label)]})});
+                  
+              }
             }else{
-                children.map(child => {setValue(pre => { return[...pre.filter(skill=>skill!==child.props.label)]})});
+              if(checked){
+                (!checkedValues.includes(children.props.label)) && setValue(pre => [...pre, children.props.label])
                 
+              }else{
+                  setValue(pre => { return[...pre.filter(skill=>skill!==children.props.label)]});
+                  
+              }
             }
+            
             
         }
         
@@ -106,12 +116,6 @@ const TestingCode = ({isCheckedAll, onCheckAllChange}) => {
         
       }, [checkedValues]);
 
-  
-
-
-  
-
-  
     
   return (
     <>
@@ -171,6 +175,7 @@ const TestingCode = ({isCheckedAll, onCheckAllChange}) => {
                     <td className='w-full p-4'>
                     <Checkbox label="REPORTS" setValue={setValue} parent={true} checkedValues={checkedValues}>
                         <Checkbox value="View_Reports" label="View Reports" parent={false} showExpandIcon={false} setValue={setValue} checkedValues={checkedValues}/>
+                        
                     </Checkbox>
                     </td>
                 </tr>

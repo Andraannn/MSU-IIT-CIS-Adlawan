@@ -18,6 +18,8 @@ import TestingCode from './routes/testing';
 import StudentPatients from './routes/student_widget';
 import FacultyStaff from './routes/facultystaff_widget';
 import TotalAppointments from './routes/totalappoint_widget';
+import Lightbox from './routes/lightbox';
+import Lightbox_Final from './routes/lightbox_final';
 
 function App() {
   
@@ -41,6 +43,8 @@ function App() {
       <Route element={<StudentPatients></StudentPatients>}></Route>
       <Route element={<FacultyStaff></FacultyStaff>}></Route>
       <Route element={<TotalAppointments></TotalAppointments>}></Route>
+      <Route element={<Lightbox></Lightbox>}></Route>
+      <Route path="/lightbox" element={<Lightbox_Final></Lightbox_Final>}></Route>
 
 
     </Routes>
